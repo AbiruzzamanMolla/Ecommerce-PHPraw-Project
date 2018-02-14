@@ -21,8 +21,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			<h1>Admin Login</h1>
 			<span style="color:red; font-size:18px;">
 				<?php
-				if(isset($loginmsg)){
-					echo $loginmsg;
+				if(isset($loginChk)){
+					echo $loginChk;
 				}
 				?>
 			</span>
