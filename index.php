@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="font-awesome/css/fontawesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/style.css">
-    <!-- JQuery 3.3.1 -->
+  <!-- JQuery 3.3.1 -->
   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   -->
   <!-- Bootstrap JS 3.3.7 -->
@@ -67,18 +67,27 @@
           <img src="images/title.png" alt="title" class="hidden-xs" height="30px" width="100px">
           <img src="images/title1.png" alt="title" class="visible-xs">
         </a>
-        <button class="navbar-toggle" data-toggle="collapse" data-targe="#navigation">
-          <span class="sr-only">Toggle Navagation</span>
-          <li class="fa fa-align-justify"></li>
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+
+          <span class="sr-only">Toggle Navigation </span>
+
+          <i class="fa fa-align-justify"></i>
+
         </button>
-        <button type="button" class="navbar-toggle" data-toggle="navbar-toggle" data-targe="#search">
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
+
           <span class="sr-only">Toggle Search</span>
-          <li class="fa fa-search"></li>
+
+          <i class="fa fa-search"></i>
+
         </button>
+
       </div>
       <!--navbar header ends-->
       <!--navbar-collapse collapse starts-->
-      <div class="navbar-collapse collapse" id="navigation">
+      <div id="navigation" class="collapse navbar-collapse">
         <!--padding-nav starts-->
         <div class="padding-nav">
           <!--nav navbar-nav navbar-left starts-->
@@ -112,22 +121,25 @@
         <!--btn btn-primary navbar-btn right ends-->
         <!--navbar-collapse collapse right starts-->
         <div class="navbar-collapse collapse right">
-          <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-targe="#search">
+          <button type="button" class="btn navbar-btn btn-primary" data-toggle="collapse" data-target="#search">
             <span class="sr-only"> Toggle Search</span>
             <li class="fa fa-search"></li>
           </button>
         </div>
         <!--navbar-collapse collapse right ends-->
         <!--collapse clearfix starts-->
-        <div class="collapse" id="search">
+        <div id="search" class="collapse">
           <!--navbar form starts-->
           <form action="results.php" class="navbar-form" method="get">
             <!--input-group starts-->
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Search" name="user_query" required>
-              <button type="submit" value="Search" name="search" class="btn btn-primary">
-                <i class="fa fa-search"></i>
-              </button>
+              <span class="input-group-btn">
+                <!--input group btn-->
+                <button type="submit" value="Search" name="search" class="btn btn-primary">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
             </div>
             <!--input-group ends-->
           </form>
@@ -136,6 +148,7 @@
         <!--collapse clearfix ends-->
       </div>
       <!--navbar-collapse collapse ends-->
+
     </div>
     <!-- Container ends-->
   </div>
