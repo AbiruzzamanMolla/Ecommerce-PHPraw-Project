@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="styles/bootstrap.min.css">
   <link rel="stylesheet" href="font-awesome/css/fontawesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="" rel="stylesheet" type="text/css"  media="screen, projection"/>
   <link href="styles/style.css" rel="stylesheet"></link>
   <!-- JQuery 3.3.1 -->
   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

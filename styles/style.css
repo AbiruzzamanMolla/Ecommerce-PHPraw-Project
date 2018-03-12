@@ -164,12 +164,13 @@ body {
     text-align: center;
 }
 
-#advantages .icon .box {
+#advantages .box .icon {
     position: absolute;
     font-size: 120px;
     width: 100%;
     text-align: center;
     top: -20px;
+    left: 0;
     height: 100%;
     float: left;
     color: #eeeeee;
