@@ -256,6 +256,156 @@
     </div>
   </div>
 </div> <!--hot ends-->
+
+<div id="content" class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-6 single">
+      <div class="product">
+        <a href="detiles.php">
+          <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+        </a>
+
+        <div class="text">
+          <h3><a href="detiles.php">Marvel Black Kids POLO T-Shirt</a></h3>
+          <p class="price">$50</p>
+          <p class="buttons">
+            <a href="detiles.php" class="btn btn-default">View Detiles</a>
+            <a href="detiles.php" class="btn btn-primary">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-sm-6 single">
+      <div class="product">
+        <a href="detiles.php">
+          <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+        </a>
+
+        <div class="text">
+          <h3><a href="detiles.php">Marvel Black Kids POLO T-Shirt</a></h3>
+          <p class="price">$50</p>
+          <p class="buttons">
+            <a href="detiles.php" class="btn btn-default">View Detiles</a>
+            <a href="detiles.php" class="btn btn-primary">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-sm-6 single">
+      <div class="product">
+        <a href="detiles.php">
+          <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+        </a>
+
+        <div class="text">
+          <h3><a href="detiles.php">Marvel Black Kids POLO T-Shirt</a></h3>
+          <p class="price">$50</p>
+          <p class="buttons">
+            <a href="detiles.php" class="btn btn-default">View Detiles</a>
+            <a href="detiles.php" class="btn btn-primary">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-sm-6 single">
+      <div class="product">
+        <a href="detiles.php">
+          <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+        </a>
+
+        <div class="text">
+          <h3><a href="detiles.php">Marvel Black Kids POLO T-Shirt</a></h3>
+          <p class="price">$50</p>
+          <p class="buttons">
+            <a href="detiles.php" class="btn btn-default">View Detiles</a>
+            <a href="detiles.php" class="btn btn-primary">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-sm-6 single">
+      <div class="product">
+        <a href="detiles.php">
+          <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+        </a>
+
+        <div class="text">
+          <h3><a href="detiles.php">Marvel Black Kids POLO T-Shirt</a></h3>
+          <p class="price">$50</p>
+          <p class="buttons">
+            <a href="detiles.php" class="btn btn-default">View Detiles</a>
+            <a href="detiles.php" class="btn btn-primary">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-sm-6 single">
+      <div class="product">
+        <a href="detiles.php">
+          <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+        </a>
+
+        <div class="text">
+          <h3><a href="detiles.php">Marvel Black Kids POLO T-Shirt</a></h3>
+          <p class="price">$50</p>
+          <p class="buttons">
+            <a href="detiles.php" class="btn btn-default">View Detiles</a>
+            <a href="detiles.php" class="btn btn-primary">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-sm-6 single">
+      <div class="product">
+        <a href="detiles.php">
+          <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+        </a>
+
+        <div class="text">
+          <h3><a href="detiles.php">Marvel Black Kids POLO T-Shirt</a></h3>
+          <p class="price">$50</p>
+          <p class="buttons">
+            <a href="detiles.php" class="btn btn-default">View Detiles</a>
+            <a href="detiles.php" class="btn btn-primary">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 col-sm-6 single">
+      <div class="product">
+        <a href="detiles.php">
+          <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+        </a>
+
+        <div class="text">
+          <h3><a href="detiles.php">Marvel Black Kids POLO T-Shirt</a></h3>
+          <p class="price">$50</p>
+          <p class="buttons">
+            <a href="detiles.php" class="btn btn-default">View Detiles</a>
+            <a href="detiles.php" class="btn btn-primary">
+              <i class="fa fa-shopping-cart"></i> Add to Cart
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<?php include "includes/footer.php"; ?>
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </body>
