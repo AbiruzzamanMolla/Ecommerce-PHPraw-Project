@@ -6,19 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>E-Commerce Store</title>
-  <script src="js/jquery.js"></script>
+
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100">
   <link rel="stylesheet" href="styles/bootstrap.min.css">
   <link rel="stylesheet" href="font-awesome/css/fontawesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles/style.css">
+  <link href="" rel="stylesheet" type="text/css"  media="screen, projection"/>
+  <link href="styles/style.css" rel="stylesheet"></link>
   <!-- JQuery 3.3.1 -->
   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   -->
   <!-- Bootstrap JS 3.3.7 -->
   <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   -->
-  <script src="js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -153,7 +154,101 @@
     <!-- Container ends-->
   </div>
   <!-- Navbar ends-->
+  <!-- container slider starts -->
+<div class="container" id="slider">
+  <!-- col md 12 starts -->
+  <div class="col-md-12">
+  <!-- caurseel starts -->
+    <div id="myCarousel" class="carousel" data-ride="carousel">
+ <!-- carousel-indicators starts -->
+      <ol class="carousel-indicators">
+        <li dara-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+ <!-- carousel-indicators ends -->
+ <!-- carousel-inner start -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="admin_area/slides_images/1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="admin_area/slides_images/2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="admin_area/slides_images/3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="admin_area/slides_images/4.jpg" alt="">
+        </div>
+      </div>
+ <!-- carousel-inner ends -->
 
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><!-- left carousel-control Starts -->
+
+        <span class="glyphicon glyphicon-chevron-left"> </span>
+
+        <span class="sr-only"> Previous </span>
+
+      </a><!-- left carousel-control Ends -->
+
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><!-- right carousel-control Starts -->
+
+        <span class="glyphicon glyphicon-chevron-right"> </span>
+
+        <span class="sr-only"> Next </span>
+
+      </a><!-- right carousel-control Ends -->
+
+    </div>
+  <!-- caurseel ends -->
+  </div>
+  <!-- col md 12 ends -->
+</div>
+  <!-- container slider ends -->
+
+<div id="advantages"> <!-- advantages starts -->
+  <div class="container"> <!-- container starts -->
+    <div class="same-height-row"> <!-- same height row starts -->
+      <div class="col-sm-4">
+        <div class="box same-height">
+          <div class="icon">
+          <i class="fa fa-heart"></i>
+          </div>
+          <h3>
+            <a href="#">WE LOVE OUR CUSTOMERS</a>
+          </h3>
+            <p>We are know to provide best possible service over</p>
+        </div>
+      </div>
+    <div class="col-sm-4">
+      <div class="box seme-height">
+        <div class="icon">
+          <i class="fa fa-tags"></i>
+          </div>
+          <h3>
+            <a href="#">WE LOVE OUR CUSTOMERS</a>
+          </h3>
+            <p>We are know to provide best possible service over</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="box seme-height">
+        <div class="icon">
+          <i class="fa fa-thumbs-up"></i>
+          </div>
+          <h3>
+            <a href="#">WE LOVE OUR CUSTOMERS</a>
+          </h3>
+            <p>We are know to provide best possible service over</p>
+      </div>
+    </div>
+    </div> <!-- same height row ends -->
+  </div>  <!-- container ends -->
+</div> <!-- advantages ends -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
