@@ -248,9 +248,11 @@
 </div> <!-- advantages ends -->
 
 <div id="hot"> <!--hot start-->
-  <div class="container">
-    <div class="col-md-12">
-      <h2>Latest this week</h2>
+  <div class="box">
+    <div class="container">
+      <div class="col-md-12">
+        <h2>Latest this week</h2>
+      </div>
     </div>
   </div>
 </div> <!--hot ends-->
