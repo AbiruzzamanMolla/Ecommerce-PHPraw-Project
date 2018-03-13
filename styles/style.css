@@ -281,11 +281,11 @@ body {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
-#content .panel .sidebar-menu ul.nav.category-menu {
+#content .panel .sidebar-menu ul .nav .category-menu {
   margin-bottom: 20px;
 }
 
-#content .panel .sidebar-menu ul.nav.category-menu li a {
+#content .panel .sidebar-menu ul .nav .category-menu li a {
   text-transform: uppercase;
   font-weight: bold;
 }
