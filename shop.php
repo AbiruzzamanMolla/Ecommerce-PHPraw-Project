@@ -152,27 +152,141 @@
     <!-- Container ends-->
   </div>
   <!-- Navbar ends-->
-<div id="content">
-  <div class="container">
-    <div class="col-md-12">
-    <ul class="breadcrumb">
-    <li>
-    <a href="index.php">Home</a>
-    </li>
-    <li>
-     Shop
-    </li>
-    </ul>
+  <div id="content">
+    <div class="container">
+      <div class="col-md-12">
+        <ul class="breadcrumb">
+          <li>
+            <a href="index.php">Home</a>
+          </li>
+          <li>
+            Shop
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <?php include "includes/sidebar.php"; ?>
+      </div>
+
+      <div class="col-md-9">
+        <div class="box">
+          <h1> Shop </h1>
+          <p>
+            Et culpa amet esse amet ipsum non fugiat amet sint ipsum pariatur proident sunt. Officia laboris Lorem voluptate eiusmod
+            laborum minim cillum. Ullamco esse est id dolor eiusmod nisi id sint fugiat sit mollit adipisicing exercitation.</p>
+
+        </div>
+        <!-- Box ends -->
+        <div class="row">
+          <div class="col-md-4 col-sm-6 center-responsive">
+            <div class="product">
+              <a href="details.php">
+              <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+              </a>
+              <div class="text">
+              <h3><a href="detiles.php">Marvel  Black Kids T-Shirt</a></h3>
+              <p class="price">50$</p>
+              <p class="buttons">
+              <a href="detiles.php" class="btn btn-default">View Detiles</a>
+              <a href="detiles.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 center-responsive">
+            <div class="product">
+              <a href="details.php">
+              <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+              </a>
+              <div class="text">
+              <h3><a href="detiles.php">Marvel  Black Kids T-Shirt</a></h3>
+              <p class="price">50$</p>
+              <p class="buttons">
+              <a href="detiles.php" class="btn btn-default">View Detiles</a>
+              <a href="detiles.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 center-responsive">
+            <div class="product">
+              <a href="details.php">
+              <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+              </a>
+              <div class="text">
+              <h3><a href="detiles.php">Marvel  Black Kids T-Shirt</a></h3>
+              <p class="price">50$</p>
+              <p class="buttons">
+              <a href="detiles.php" class="btn btn-default">View Detiles</a>
+              <a href="detiles.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 center-responsive">
+            <div class="product">
+              <a href="details.php">
+              <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+              </a>
+              <div class="text">
+              <h3><a href="detiles.php">Marvel  Black Kids T-Shirt</a></h3>
+              <p class="price">50$</p>
+              <p class="buttons">
+              <a href="detiles.php" class="btn btn-default">View Detiles</a>
+              <a href="detiles.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 center-responsive">
+            <div class="product">
+              <a href="details.php">
+              <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+              </a>
+              <div class="text">
+              <h3><a href="detiles.php">Marvel  Black Kids T-Shirt</a></h3>
+              <p class="price">50$</p>
+              <p class="buttons">
+              <a href="detiles.php" class="btn btn-default">View Detiles</a>
+              <a href="detiles.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 center-responsive">
+            <div class="product">
+              <a href="details.php">
+              <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+              </a>
+              <div class="text">
+              <h3><a href="detiles.php">Marvel  Black Kids T-Shirt</a></h3>
+              <p class="price">50$</p>
+              <p class="buttons">
+              <a href="detiles.php" class="btn btn-default">View Detiles</a>
+              <a href="detiles.php" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <center>
+        <ul class="pagination">
+          <li><a href="shop.php">First Page</a></li>
+          <li><a href="shop.php">1</a></li>
+          <li><a href="shop.php">2</a></li>
+          <li><a href="shop.php">3</a></li>
+          <li><a href="shop.php">4</a></li>
+          <li><a href="shop.php">5</a></li>
+          <li><a href="shop.php">Last Page</a></li>
+        </ul>
+        </center>
+      </div>
+
     </div>
-<div class="col-md-3">
-<?php include "includes/sidebar.php"; ?>
-</div>
-
   </div>
-</div>
 
 
-<?php include "includes/footer.php"; ?>
+  <?php include "includes/footer.php"; ?>
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </body>

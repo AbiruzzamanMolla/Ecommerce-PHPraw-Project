@@ -3,7 +3,7 @@
 <h3 class="panel-title">Product Categories</h3>
 </div>
 <div class="panel-body">
-<ul class="nav nav-pills nav-stacked category-menu">
+<ul class="nav nav-pills nav-stacked category-menu aul">
 <li><a href="shop.php">Jackets</a></li>
 <li><a href="shop.php">Accesseries</a></li>
 <li><a href="shop.php">Shoes</a></li>
@@ -17,7 +17,7 @@
 <h3 class="panel-title">Categories</h3>
 </div>
 <div class="panel-body">
-<ul class="nav nav-pills nav-stacked category-menu">
+<ul class="nav nav-pills nav-stacked category-menu aul">
 <li><a href="shop.php">Man</a></li>
 <li><a href="shop.php">Woman</a></li>
 <li><a href="shop.php">Kids</a></li>
