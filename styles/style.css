@@ -321,6 +321,34 @@ body {
 }
 
 
+/* Details Styles */
+
+#content #productMain {
+    margin-bottom: 30px;
+}
+
+#content #productMain .price {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#content #mainImage {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+#content #thumbs a {
+    display: block;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    border: solid 2px transparent;
+}
+
+#content .headline {
+    height: 350px;
+}
+
+
 /* Footer Styles */
 
 #footer {
