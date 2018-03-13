@@ -164,6 +164,10 @@
     </li>
     </ul>
     </div>
+<div class="col-md-3">
+<?php include "includes/sidebar.php"; ?>
+</div>
+
   </div>
 </div>
 
