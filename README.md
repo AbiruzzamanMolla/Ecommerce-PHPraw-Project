@@ -38,8 +38,8 @@ modern-e-commerce-store-in-php-mysqli-with-bootstrap
 │   ├── 033 Lecture-30.mp4 x
 │   ├── 034 Lecture-31.mp4 x
 │   ├── 035 Lecture-32.mp4 x
-│   ├── 036 Lecture-33.mp4
-│   ├── 037 Lecture-34.mp4
+│   ├── 036 Lecture-33.mp4 x
+│   ├── 037 Lecture-34.mp4 x
 │   ├── 038 Lecture-35.mp4
 │   ├── 039 Lecture-36.mp4
 │   ├── 040 Lecture-37.mp4
