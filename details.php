@@ -82,7 +82,7 @@
             <li>
               <a href="index.php">Home </a>
             </li>
-            <li class="active">
+            <li>
               <a href="shop.php">Shop </a>
             </li>
             <li>
