@@ -182,7 +182,7 @@
 
                 <div class="box">
                     <!-- box Starts -->
-                <?php
+                    <?php
                 if(isset($_GET['my_orders'])){
                     include "my_orders.php";
                 }
@@ -219,10 +219,10 @@ include "includes/footer.php";
 
 ?>
 
-    <script src="js/jquery.min.js">
-    </script>
+        <script src="js/jquery.min.js">
+        </script>
 
-    <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 
 </body>
 
