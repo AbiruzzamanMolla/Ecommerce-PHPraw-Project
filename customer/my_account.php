@@ -178,7 +178,7 @@
             <!-- col-md-3 Ends -->
 
             <div class="col-md-9">
-                <!--- col-md-9 Starts -->
+                <!-- col-md-9 Starts -->
 
                 <div class="box">
                     <!-- box Starts -->
@@ -215,7 +215,7 @@
 
     <?php
 
-include("includes/footer.php");
+include "includes/footer.php";
 
 ?>
 
