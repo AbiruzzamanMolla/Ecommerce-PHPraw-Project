@@ -1,6 +1,9 @@
+<?php
+include "includes/db.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +21,6 @@
   <!-- Bootstrap JS 3.3.7 -->
   <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   -->
-
 </head>
 
 <body>
@@ -169,18 +171,26 @@
         <!-- carousel-indicators ends -->
         <!-- carousel-inner start -->
         <div class="carousel-inner">
-          <div class="item active">
-            <img src="admin_area/slides_images/1.jpg" alt="">
-          </div>
-          <div class="item">
-            <img src="admin_area/slides_images/2.jpg" alt="">
-          </div>
-          <div class="item">
-            <img src="admin_area/slides_images/3.jpg" alt="">
-          </div>
-          <div class="item">
-            <img src="admin_area/slides_images/4.jpg" alt="">
-          </div>
+        <?php
+        $get_slides = "SELECT * FROM slider LIMIT 0,1";
+        $run_slides = mysqli_query($con, $get_slides);
+        while($row_slides = mysqli_fetch_array($run_slides)){
+          $slides_name = $row_slides['slide_name'];
+          $slides_image = $row_slides['slide_image'];
+
+          echo "<div class='item active'><img src='admin_area/slides_images/$slides_image' alt='$slides_name'></div>";
+        }
+        ?>
+        <?php
+        $get_slides = "SELECT * FROM slider LIMIT 1,4";
+        $run_slides = mysqli_query($con, $get_slides);
+        while($row_slides = mysqli_fetch_array($run_slides)){
+          $slides_name = $row_slides['slide_name'];
+          $slides_image = $row_slides['slide_image'];
+
+          echo "<div class='item'><img src='admin_area/slides_images/$slides_image' alt='$slides_name'></div>";
+        }
+        ?>
         </div>
         <!-- carousel-inner ends -->
 

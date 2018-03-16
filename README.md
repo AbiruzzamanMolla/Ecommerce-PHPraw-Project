@@ -58,8 +58,8 @@ modern-e-commerce-store-in-php-mysqli-with-bootstrap
 │   ├── 053 Lecture-50.mp4 x
 │   └── 054 Lecture-51.mp4 x
 ├── 03 Making E-Commerce Store Dynamic Through PHPMYSQLI
-│   ├── 055 Lecture-52.mp4
-│   ├── 056 Lecture-53.mp4
+│   ├── 055 Lecture-52.mp4 x
+│   ├── 056 Lecture-53.mp4 x
 │   ├── 057 Lecture-54.mp4
 │   ├── 058 Lecture-55.mp4
 │   ├── 059 Lecture-56.mp4
