@@ -68,23 +68,16 @@
 
         <ul>
           <!-- ul Starts -->
-
-          <li>
-            <a href='shop.php?p_cat='> Product 1</a>
-          </li>
-          <li>
-            <a href='shop.php?p_cat='> Product 2</a>
-          </li>
-          <li>
-            <a href='shop.php?p_cat='> Product 3</a>
-          </li>
-          <li>
-            <a href='shop.php?p_cat='> Product 4</a>
-          </li>
-          <li>
-            <a href='shop.php?p_cat='> Product 5</a>
-          </li>
-
+          <?php
+            $get_p_cats = "SELECT * FROM product_categories";
+            $run_p_cats = mysqli_query($con,$get_p_cats);
+            while($row = mysqli_fetch_array($run_p_cats)){
+              $p_cat_id = $row['p_cat_id'];
+              $p_cat_title = $row['p_cat_title'];
+              echo "<li><a href='shop.php?p_cat=$p_cat_id'> $p_cat_title</a></li>";
+            }
+          ?>
+          
         </ul>
         <!-- ul Ends -->
 
@@ -158,7 +151,7 @@
         <h4> Stay in touch </h4>
 
         <p class="social">
-          <!-- social Starts --->
+          <!-- social Starts -->
 
           <a href="#">
             <i class="fa fa-facebook"></i>
