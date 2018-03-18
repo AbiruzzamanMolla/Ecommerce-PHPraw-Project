@@ -218,7 +218,7 @@ include "functions/functions.php";
       </div>
       <!-- caurseel ends -->
     </div>
-    <!-- col md 12 ends -->
+    <!-- col-md-12 ends -->
   </div>
   <!-- container slider ends -->
 

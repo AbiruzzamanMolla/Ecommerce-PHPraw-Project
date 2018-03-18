@@ -296,7 +296,6 @@ if(isset($_POST['submit'])){
     $product_keywords = $_POST['product_keywords'];
     $product_price = $_POST['product_price'];
 
-
     $product_img1 = $_FILES['product_img1']['name'];
     $product_img2 = $_FILES['product_img2']['name'];
     $product_img3 = $_FILES['product_img3']['name'];

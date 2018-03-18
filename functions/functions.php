@@ -33,4 +33,26 @@ function getPro(){
       </div>";
     }
 }
+
+function proCats(){
+  global $db;
+  $get_p_cats = "SELECT * FROM product_categories";
+  $run_p_cats = mysqli_query($db ,$get_p_cats);
+  while($row = mysqli_fetch_array($run_p_cats)){
+    $p_cat_id = $row['p_cat_id'];
+    $p_cat_title = $row['p_cat_title'];
+    echo "<li><a href='shop.php?p_cat=$p_cat_id'> $p_cat_title</a></li>";
+  }
+}
+
+function getCats(){
+  global $db;
+  $get_cats = "SELECT * FROM categories";
+  $run_cats = mysqli_query($db ,$get_cats);
+  while($row = mysqli_fetch_array($run_cats)){
+    $cat_id = $row['cat_id'];
+    $cat_title = $row['cat_title'];
+    echo "<li><a href='shop.php?p_cat=$cat_id'> $cat_title</a></li>";
+  }
+}
 ?>
