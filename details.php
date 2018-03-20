@@ -1,4 +1,22 @@
 <?php include "includes/header.php"; ?>
+<?php
+if(isset($_GET['pro_id'])){
+  $pro_id = $_GET['pro_id'];
+  $get_product = "SELECT * FROM products WHERE product_id = '$product_id'";
+  $run_product = mysqli_query($con, $get_product);
+  $row_pro = mysqli_fetch_array($run_product);
+  $p_cat_id = $row_pro['product_id'];
+  $p_title = $row_pro['product_title'];
+  $p_price = $row_pro['product_price'];
+  $p_desc = $row_pro['product_desc'];
+  $p_img1 = $row_pro['product_img1'];
+  $p_img2 = $row_pro['product_img2'];
+  $p_img3 = $row_pro['product_img3'];
+
+  $get_p_cat = "SELECT * FROM product_categories WHERE p_cat_id = '$p_cat_id'";
+  $run_p_cat = ;
+}
+?>
   <div id="content">
     <div class="container">
       <div class="col-md-12">
