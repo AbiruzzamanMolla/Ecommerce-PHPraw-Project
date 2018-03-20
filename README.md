@@ -60,22 +60,22 @@ modern-e-commerce-store-in-php-mysqli-with-bootstrap
 ├── 03 Making E-Commerce Store Dynamic Through PHPMYSQLI
 │   ├── 055 Lecture-52.mp4 x
 │   ├── 056 Lecture-53.mp4 x
-│   ├── 057 Lecture-54.mp4
-│   ├── 058 Lecture-55.mp4
-│   ├── 059 Lecture-56.mp4
-│   ├── 060 Lecture-57.mp4
-│   ├── 061 Lecture-58.mp4
-│   ├── 062 Lecture-59.mp4
-│   ├── 063 Lecture-60.mp4
-│   ├── 064 Lecture-61.mp4
-│   ├── 065 Lecture-62.mp4
-│   ├── 066 Lecture-63.mp4
-│   ├── 067 Lecture-64.mp4
-│   ├── 068 Lecture-65.mp4
-│   ├── 069 Lecture-66.mp4
-│   ├── 070 Lecture-67.mp4
-│   ├── 071 Lecture-68.mp4
-│   ├── 072 Lecture-69.mp4
+│   ├── 057 Lecture-54.mp4 x
+│   ├── 058 Lecture-55.mp4 x
+│   ├── 059 Lecture-56.mp4 x
+│   ├── 060 Lecture-57.mp4 x
+│   ├── 061 Lecture-58.mp4 x
+│   ├── 062 Lecture-59.mp4 x
+│   ├── 063 Lecture-60.mp4 x
+│   ├── 064 Lecture-61.mp4 x
+│   ├── 065 Lecture-62.mp4 x
+│   ├── 066 Lecture-63.mp4 x
+│   ├── 067 Lecture-64.mp4 x
+│   ├── 068 Lecture-65.mp4 x
+│   ├── 069 Lecture-66.mp4 x
+│   ├── 070 Lecture-67.mp4 x
+│   ├── 071 Lecture-68.mp4 x
+│   ├── 072 Lecture-69.mp4 x
 │   ├── 073 Lecture-70.mp4
 │   ├── 074 Lecture-71.mp4
 │   ├── 075 Lecture-72.mp4
