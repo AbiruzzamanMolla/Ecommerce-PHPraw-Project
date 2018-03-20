@@ -2,19 +2,23 @@
 <?php
 if(isset($_GET['pro_id'])){
   $pro_id = $_GET['pro_id'];
-  $get_product = "SELECT * FROM products WHERE product_id = '$product_id'";
+  $get_product = "SELECT * FROM products WHERE product_id = '$pro_id'";
   $run_product = mysqli_query($con, $get_product);
   $row_pro = mysqli_fetch_array($run_product);
-  $p_cat_id = $row_pro['product_id'];
+  $p_cat_id = $row_pro['p_cat_id'];
   $p_title = $row_pro['product_title'];
   $p_price = $row_pro['product_price'];
-  $p_desc = $row_pro['product_desc'];
+  $p_desc = $row_pro['product_disc'];
   $p_img1 = $row_pro['product_img1'];
   $p_img2 = $row_pro['product_img2'];
   $p_img3 = $row_pro['product_img3'];
 
   $get_p_cat = "SELECT * FROM product_categories WHERE p_cat_id = '$p_cat_id'";
-  $run_p_cat = ;
+  $run_p_cat = mysqli_query($con, $get_p_cat);
+  $row_p_cat = mysqli_fetch_array($run_p_cat);
+  $p_cat_title = $row_p_cat['p_cat_title'];
+
+
 }
 ?>
   <div id="content">
@@ -24,7 +28,9 @@ if(isset($_GET['pro_id'])){
           <li>
             <a href="index.php">Home</a>
           </li>
-          <li>Shop </li>
+          <li><a href="shop.php">Shop </a></li>
+          <li><a href="shop.php?p_cat=<?php echo $p_cat_id; ?>"><?php echo $p_cat_title; ?> </a></li>
+          <li><?php echo $p_title; ?></li>
         </ul>
       </div>
       <div class="col-md-3">
@@ -48,13 +54,13 @@ if(isset($_GET['pro_id'])){
                 <!-- carousel-inner start -->
                 <div class="carousel-inner">
                   <div class="item active">
-                    <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+                    <img src="admin_area/product_images/<?php echo $p_img1; ?>" alt="" class="img-responsive">
                   </div>
                   <div class="item">
-                    <img src="admin_area/product_images/product2.jpg" alt="" class="img-responsive">
+                    <img src="admin_area/product_images/<?php echo $p_img2; ?>" alt="" class="img-responsive">
                   </div>
                   <div class="item">
-                    <img src="admin_area/product_images/product3.jpg" alt="" class="img-responsive">
+                    <img src="admin_area/product_images/<?php echo $p_img3; ?>" alt="" class="img-responsive">
                   </div>
                 </div>
                 <!-- carousel-inner ends -->
@@ -76,8 +82,8 @@ if(isset($_GET['pro_id'])){
           </div>
           <div class="col-sm-6">
             <div class="box">
-              <h1 class="text-center">U.S Polo Black T-Shirt</h1>
-              <form action="details.php" method="post" class="form-horizontal">
+              <h1 class="text-center"><?php echo $p_title; ?></h1>
+              <form action="index.php?add_cart=<?php echo $pro_id; ?>" method="post" class="form-horizontal">
                 <div class="form-group">
                   <label class="col-md-5 control-label" for="">Product Quntity</label>
                   <div class="col-md-7">
@@ -103,7 +109,7 @@ if(isset($_GET['pro_id'])){
                     </select>
                   </div>
                 </div>
-                <p class="price">50$</p>
+                <p class="price"><?php echo $p_price; ?>$</p>
                 <p class="text-center buttons">
                   <button class="btn btn-primary" type="submit">
                     <i class="fa fa-shopping-cart"></i>Add to Cart</button>
@@ -113,17 +119,17 @@ if(isset($_GET['pro_id'])){
             <div class="row" id="thumbs">
               <div class="col-xs-4">
                 <a href="#" class="thumb">
-                  <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+                  <img src="admin_area/product_images/<?php echo $p_img1; ?>" alt="" class="img-responsive">
                 </a>
               </div>
               <div class="col-xs-4">
                 <a href="#" class="thumb">
-                  <img src="admin_area/product_images/product2.jpg" alt="" class="img-responsive">
+                  <img src="admin_area/product_images/<?php echo $p_img2; ?>" alt="" class="img-responsive">
                 </a>
               </div>
               <div class="col-xs-4">
                 <a href="#" class="thumb">
-                  <img src="admin_area/product_images/product3.jpg" alt="" class="img-responsive">
+                  <img src="admin_area/product_images/<?php echo $p_img3; ?>" alt="" class="img-responsive">
                 </a>
               </div>
             </div>
@@ -132,10 +138,7 @@ if(isset($_GET['pro_id'])){
         <div class="box" id="details">
           <p>
             <h4>Product Details</h4>
-            <p>Occaecat enim anim quis laborum ex laboris reprehenderit elit. Commodo esse velit consectetur mollit ea nisi
-              adipisicing labore aliquip ea fugiat aute cillum. Ipsum aute officia consequat occaecat mollit fugiat non exercitation
-              do ut Lorem laborum commodo. Sint occaecat nostrud exercitation amet minim labore officia ea adipisicing. Reprehenderit
-              voluptate id eu non laborum officia eu cillum tempor aliqua sint incididunt elit est. Ad velit sit culpa anim.
+            <p><?php echo $p_desc; ?>
               </p>
             <h4>Size</h4>
             <ul>
@@ -154,45 +157,29 @@ if(isset($_GET['pro_id'])){
               <h3 class="text-center">You may alse like these product</h3>
             </div>
           </div>
+          <?php 
+          $query = "SELECT * FROM products ORDER BY 1 LIMIT 0,3";
+          $result = mysqli_query($con, $query);
+          while($row = mysqli_fetch_array($result)){
+            $pro_id = $row['product_id'];
+            $pro_img1 = $row['product_img1'];
+            $pro_title = $row['product_title'];
+            $pro_price = $row['product_price'];
+          ?>
           <div class="center-responsive col-md-3 col-sm-6">
             <div class="product same-height">
-              <a href="details.php">
-                <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
+              <a href="details.php?pro_id=<?php echo $pro_id; ?>">
+                <img src="admin_area/product_images/<?php echo $pro_img1; ?>" alt="" class="img-responsive">
               </a>
               <div class="text">
                 <h3>
-                  <a href="details.php">Marvel Polo Black T-Shirt</a>
+                  <a href="details.php?pro_id=<?php echo $pro_id; ?>"><?php echo $pro_title; ?></a>
                 </h3>
-                <p class="price">50$</p>
+                <p class="price"><?php echo $pro_price; ?>$</p>
               </div>
             </div>
           </div>
-          <div class="center-responsive col-md-3 col-sm-6">
-            <div class="product same-height">
-              <a href="details.php">
-                <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
-              </a>
-              <div class="text">
-                <h3>
-                  <a href="details.php">Marvel Polo Black T-Shirt</a>
-                </h3>
-                <p class="price">50$</p>
-              </div>
-            </div>
-          </div>
-          <div class="center-responsive col-md-3 col-sm-6">
-            <div class="product same-height">
-              <a href="details.php">
-                <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
-              </a>
-              <div class="text">
-                <h3>
-                  <a href="details.php">Marvel Polo Black T-Shirt</a>
-                </h3>
-                <p class="price">50$</p>
-              </div>
-            </div>
-          </div>
+        <?php } ?>
         </div>
       </div>
     </div>

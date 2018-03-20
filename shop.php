@@ -57,8 +57,8 @@
                 </h3>
                 <p class="price"><?php echo $pro_price;?>$</p>
                 <p class="buttons">
-                  <a href="details.php?pro_is=<?php echo $pro_id;?>" class="btn btn-default">View details</a>
-                  <a href="details.php?pro_is=<?php echo $pro_id;?>" class="btn btn-primary">
+                  <a href="details.php?pro_id=<?php echo $pro_id;?>" class="btn btn-default">View details</a>
+                  <a href="details.php?pro_id=<?php echo $pro_id;?>" class="btn btn-primary">
                     <i class="fa fa-shopping-cart"></i> Add to cart</a>
                 </p>
               </div>

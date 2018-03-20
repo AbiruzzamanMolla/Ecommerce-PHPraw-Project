@@ -92,8 +92,8 @@ function getCatPro(){
             </h3>
             <p class='price'>$pro_price $</p>
             <p class='buttons'>
-              <a href='details.php?pro_is=$pro_id' class='btn btn-default'>View details</a>
-              <a href='details.php?pro_is=$pro_id' class='btn btn-primary'>
+              <a href='details.php?pro_id=$pro_id' class='btn btn-default'>View details</a>
+              <a href='details.php?pro_id=$pro_id' class='btn btn-primary'>
                 <i class='fa fa-shopping-cart'></i> Add to cart</a>
             </p>
           </div>
@@ -141,8 +141,8 @@ function getProCats(){
             </h3>
             <p class='price'>$pro_price $</p>
             <p class='buttons'>
-              <a href='details.php?pro_is=$pro_id' class='btn btn-default'>View details</a>
-              <a href='details.php?pro_is=$pro_id' class='btn btn-primary'>
+              <a href='details.php?pro_id=$pro_id' class='btn btn-default'>View details</a>
+              <a href='details.php?pro_id=$pro_id' class='btn btn-primary'>
                 <i class='fa fa-shopping-cart'></i> Add to cart</a>
             </p>
           </div>
