@@ -1,4 +1,15 @@
 <?php
+/* 
+// INFO:
+//
+// Author: MD. Abiruzzaman Molla
+// Project: E-Commerce Site
+
+// TODO:
+//
+// [] add_cart problem
+// [] lecture number 79
+*/
 // init db connection
 $db = mysqli_connect("localhost","root","root","e_com");
 
@@ -31,7 +42,7 @@ function add_cart(){
       $query = "INSERT INTO cart(p_id,ip_add,qty,size) VALUES ('$p_id', '$ip_add', '$product_qty', '$product_size')";
       $run = mysqli_query($db, $query);
       echo "<script>window.open('detils.php?pro_id=$p_id','_self')</script>";
-      
+
     }
   }
 
