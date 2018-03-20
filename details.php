@@ -83,11 +83,13 @@ if(isset($_GET['pro_id'])){
           <div class="col-sm-6">
             <div class="box">
               <h1 class="text-center"><?php echo $p_title; ?></h1>
+              <?php add_cart(); ?>
               <form action="index.php?add_cart=<?php echo $pro_id; ?>" method="post" class="form-horizontal">
                 <div class="form-group">
                   <label class="col-md-5 control-label" for="">Product Quntity</label>
                   <div class="col-md-7">
                     <select name="product_qty" id="" class="form-control">
+                      <option>Select quntity</option>
                       <option value="">1</option>
                       <option value="">2</option>
                       <option value="">3</option>
@@ -158,7 +160,7 @@ if(isset($_GET['pro_id'])){
             </div>
           </div>
           <?php 
-          $query = "SELECT * FROM products ORDER BY 1 LIMIT 0,3";
+          $query = "SELECT * FROM products ORDER BY rand() LIMIT 0,3";
           $result = mysqli_query($con, $query);
           while($row = mysqli_fetch_array($result)){
             $pro_id = $row['product_id'];

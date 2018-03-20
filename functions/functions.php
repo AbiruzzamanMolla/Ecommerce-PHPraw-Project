@@ -1,6 +1,42 @@
 <?php
 // init db connection
 $db = mysqli_connect("localhost","root","root","e_com");
+
+//IP address retriving
+
+function getRealIP(){
+  switch(true){
+    case (!empty($_SERVER['HTTP_X_REAL_IP'])) : return $_SERVER['HTTP_X_REAL_IP'];
+    case (!empty($_SERVER['HTTP_CLIENT_IP'])) : return $_SERVER['HTTP_CLIENT_IP'];
+    case (!empty($_SERVER['HTTP_X_FORWORDED_FOR'])) : return $_SERVER['HTTP_X_FORWORDED_FOR'];
+    default : return $_SERVER['REMOTE_ADDR'];
+  }
+}
+
+// add cart function 
+
+function add_cart(){
+  global $db;
+  if(isset($_GET['add_cart'])){
+    $ip_add = getRealIP();
+    $p_id = $_GET['add_cart'];
+    $product_qty = $_POST['product_qty'];
+    $product_size = $_POST['product_size'];
+    $check_product = "SELECT * FROM cart WHERE ip_add = '$ip_add' AND p_ip = '$p_id'";
+    $run = mysqli_query($db, $check_product);
+    if(mysqli_num_rows($run) > 0){
+      echo "<script>alert('This Product is already added in cart')</script>";
+      echo "<script>window.open('detils.php?pro_id=$p_id','_self')</script>";
+    } else {
+      $query = "INSERT INTO cart(p_id,ip_add,qty,size) VALUES ('$p_id', '$ip_add', '$product_qty', '$product_size')";
+      $run = mysqli_query($db, $query);
+      echo "<script>window.open('detils.php?pro_id=$p_id','_self')</script>";
+      
+    }
+  }
+
+}
+
 //get all product for index page
 function getPro(){
     global $db;
