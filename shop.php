@@ -88,6 +88,7 @@
           </ul>
         </center>
           <?php getCatPro(); ?>
+          <?php getProCats(); ?>
       </div>
 
     </div>

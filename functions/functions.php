@@ -53,7 +53,7 @@ function getCats(){
   while($row = mysqli_fetch_array($run_cats)){
     $cat_id = $row['cat_id'];
     $cat_title = $row['cat_title'];
-    echo "<li><a href='shop.php?p_cat=$cat_id'> $cat_title</a></li>";
+    echo "<li><a href='shop.php?cat=$cat_id'> $cat_title</a></li>";
   }
 }
 //get product from categories for shop.php
@@ -74,6 +74,55 @@ function getCatPro(){
       echo "<div class='box'><h1>NO Product FOUND!</h1></div>";
     } else {
       echo "<div class='box'><h1> $p_cat_title </h1><p>$p_cat_desc</p></div>";
+    }
+    while($row_products = mysqli_fetch_array($run_product)){
+      $pro_id = $row_products['product_id'];
+      $pro_title = $row_products['product_title'];
+      $pro_price = $row_products['product_price'];
+      $pro_img1 = $row_products['product_img1'];
+      echo "
+      <div class='col-md-4 col-sm-6 center-responsive'>
+        <div class='product'>
+          <a href='details.php?pro_is=$pro_id'>
+            <img src='admin_area/product_images/$pro_img1' alt='' class='img-responsive'>
+          </a>
+          <div class='text'>
+            <h3>
+              <a href='details.php?pro_is=$pro_id'>$pro_title</a>
+            </h3>
+            <p class='price'>$pro_price $</p>
+            <p class='buttons'>
+              <a href='details.php?pro_is=$pro_id' class='btn btn-default'>View details</a>
+              <a href='details.php?pro_is=$pro_id' class='btn btn-primary'>
+                <i class='fa fa-shopping-cart'></i> Add to cart</a>
+            </p>
+          </div>
+        </div>
+        </div>";
+
+  }
+
+
+  }
+}
+//get froduct for all categories
+function getProCats(){
+  global $db;
+  if (isset($_GET['cat'])) {
+    $cat_id = $_GET['cat'];
+    $get_cat = "SELECT * FROM categories WHERE cat_id = '$cat_id'";
+    $run_cat = mysqli_query($db, $get_cat);
+    $row = mysqli_fetch_array($run_cat);
+    $cat_title = $row['cat_title'];
+    $cat_desc = $row['cat_desc'];
+
+    $get_product = "SELECT * FROM products WHERE cat_id = '$cat_id'";
+    $run_product = mysqli_query($db, $get_product);
+    $count = mysqli_num_rows($run_product);
+    if ($count == 0) {
+      echo "<div class='box'><h1>NO Product FOUND!</h1></div>";
+    } else {
+      echo "<div class='box'><h1> $cat_title </h1><p>$cat_desc</p></div>";
     }
     while($row_products = mysqli_fetch_array($run_product)){
       $pro_id = $row_products['product_id'];
