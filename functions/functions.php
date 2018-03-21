@@ -37,16 +37,48 @@ function add_cart(){
     $run = mysqli_query($db, $check_product);
     if(mysqli_num_rows($run) > 0){
       echo "<script>alert('This Product is already added in cart')</script>";
-      echo "<script>window.open('detils.php?pro_id=$p_id','_self')</script>";
+      echo "<script>window.open('details.php?pro_id=$p_id','_self')</script>";
     } else {
       $query = "INSERT INTO cart(p_id,ip_add,qty,size) VALUES ('$p_id', '$ip_add', '$product_qty', '$product_size')";
       $run = mysqli_query($db, $query);
-      echo "<script>window.open('detils.php?pro_id=$p_id','_self')</script>";
-
+      echo "<script>window.open('details.php?pro_id={$p_id}','_self')</script>";
     }
   }
+}
+
+// items functions 
+
+function items(){
+  global $db;
+  $ip_add = getRealIP();
+  $get_items = "SELECT * FROM cart WHERE ip_add = '$ip_add'";
+  $run = mysqli_query($db, $get_items);
+  $count = mysqli_num_rows($run);
+  echo $count;
 
 }
+// total price function
+
+function totalPrice(){
+  global $db;
+  $ip_add = getRealIP();
+  $total = 0;
+  $select_cart = "SELECT * FROM cart WHERE ip_add = '$ip_add'";
+  $run = mysqli_query($db, $select_cart);
+  while($rec = mysqli_fetch_array($run)){
+    $p_id = $rec['p_id'];
+    $p_qty = $rec['qty'];
+    $get_price = "SELECT * FROM products WHERE product_id = '$p_id'";
+    $run = mysqli_query($db, $get_price);
+    while($row = mysqli_fetch_array($run)){
+      $sub_total = $row['product_price']*$p_qty;
+      $total += $sub_total;
+    }
+  }
+  echo "$".$total;
+
+}
+
 
 //get all product for index page
 function getPro(){
@@ -130,12 +162,12 @@ function getCatPro(){
       echo "
       <div class='col-md-4 col-sm-6 center-responsive'>
         <div class='product'>
-          <a href='details.php?pro_is=$pro_id'>
+          <a href='details.php?pro_id=$pro_id'>
             <img src='admin_area/product_images/$pro_img1' alt='' class='img-responsive'>
           </a>
           <div class='text'>
             <h3>
-              <a href='details.php?pro_is=$pro_id'>$pro_title</a>
+              <a href='details.php?pro_id=$pro_id'>$pro_title</a>
             </h3>
             <p class='price'>$pro_price $</p>
             <p class='buttons'>
@@ -179,12 +211,12 @@ function getProCats(){
       echo "
       <div class='col-md-4 col-sm-6 center-responsive'>
         <div class='product'>
-          <a href='details.php?pro_is=$pro_id'>
+          <a href='details.php?pro_id=$pro_id'>
             <img src='admin_area/product_images/$pro_img1' alt='' class='img-responsive'>
           </a>
           <div class='text'>
             <h3>
-              <a href='details.php?pro_is=$pro_id'>$pro_title</a>
+              <a href='details.php?pro_id=$pro_id'>$pro_title</a>
             </h3>
             <p class='price'>$pro_price $</p>
             <p class='buttons'>

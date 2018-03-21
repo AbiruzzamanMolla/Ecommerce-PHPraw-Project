@@ -84,30 +84,30 @@ if(isset($_GET['pro_id'])){
             <div class="box">
               <h1 class="text-center"><?php echo $p_title; ?></h1>
               <?php add_cart(); ?>
-              <form action="index.php?add_cart=<?php echo $pro_id; ?>" method="post" class="form-horizontal">
+              <form action="details.php?add_cart=<?php echo $pro_id; ?>" method="post" class="form-horizontal">
                 <div class="form-group">
                   <label class="col-md-5 control-label" for="">Product Quntity</label>
                   <div class="col-md-7">
                     <select name="product_qty" id="" class="form-control">
                       <option>Select quntity</option>
-                      <option value="">1</option>
-                      <option value="">2</option>
-                      <option value="">3</option>
-                      <option value="">4</option>
-                      <option value="">5</option>
-                      <option value="">6</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
                     </select>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-md-5 control-label" for="">Product Size</label>
                   <div class="col-md-7">
-                    <select name="product-size" id="" class="form-control">
+                    <select name="product_size" id="" class="form-control">
                       <option value="">Select a Size</option>
-                      <option value="">Small</option>
-                      <option value="">medium</option>
-                      <option value="">Large</option>
-                      <option value="">X Large</option>
+                      <option>Small</option>
+                      <option>medium</option>
+                      <option>Large</option>
+                      <option>X Large</option>
                     </select>
                   </div>
                 </div>

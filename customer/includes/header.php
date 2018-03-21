@@ -1,6 +1,6 @@
 <?php
 include "includes/db.php";
-include "functions/functions.php";
+include "../functions/functions.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +33,7 @@ include "functions/functions.php";
             <!-- col md 6 offer starts -->
             <div class="col-md-6 offer">
                 <a href="#" class="btn btn-success btn-sm"> Wellcome :Guest</a>
-                <a href="#">Shopping Cart Total Price: $ 100 Total Items: 2</a>
+                <a href="#">Shopping Cart Total Price: $  <?php totalPrice(); ?> Total Items: <?php items(); ?></a>
             </div>
             <!-- col md 6 offer ends -->
             <!-- col md 6 starts -->
@@ -119,7 +119,7 @@ include "functions/functions.php";
                 <!--btn btn-primary navbar-btn right starts-->
                 <a class="btn btn-primary navbar-btn right" href="cart.php">
                     <li class="fa fa-shopping-cart"></li>
-                    <span>4 itelms in cart</span>
+                    <span><?php items(); ?> itelms in cart</span>
                 </a>
                 <!--btn btn-primary navbar-btn right ends-->
                 <!--navbar-collapse collapse right starts-->

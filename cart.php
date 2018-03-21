@@ -83,7 +83,7 @@
                                 <tfoot>
                                     <tr>
                                         <th colspan="5">Total</th>
-                                        <th colspan="2">$100.00</th>
+                                        <th colspan="2">$ <?php totalPrice(); ?></th>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -177,7 +177,7 @@
                                 </tr>
                                 <tr class="total">
                                     <td>Total</td>
-                                    <th>$200.00</th>
+                                    <th>$ <?php totalPrice(); ?></th>
                                 </tr>
                             </tbody>
                         </table>
