@@ -20,7 +20,13 @@
                 <div class="box">
                     <form action="cart.php" method="post" enctype="multipart-form-data">
                         <h1>Shopping Cart</h1>
-                        <p class="text-muted">You Currectly have <?php items(); ?> items in your cart.</p>
+                        <?php
+                        $ip_add = getRealIP();
+                        $select_cart = "SELECT * FROM cart WHERE ip_add='$ip_add'";
+                        $run_cart = mysqli_query($con, $select_cart);
+                        $count = mysqli_num_rows($run_cart);
+                        ?>
+                        <p class="text-muted">You Currectly have <?php echo $count; ?> items in your cart.</p>
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -34,51 +40,37 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <?php 
+                                $total = 0;
+                                while($row_cart = mysqli_fetch_array($run_cart)){
+                                    $pro_id = $row_cart['p_id'];
+                                    $pro_size = $row_cart['size'];
+                                    $pro_qty = $row_cart['qty'];
+                                    $get_product = "SELECT * FROM products WHERE product_id = '$pro_id'";
+                                    $run_products = mysqli_query($con, $get_product);
+                                    while($row_pro=mysqli_fetch_array($run_products)){
+                                        $product_title = $row_pro['product_title'];
+                                        $product_img1 = $row_pro['product_img1'];
+                                        $price_only = $row_pro['product_price'];
+                                        $sub_total = $row_pro['product_price']*$pro_qty;
+                                        $total += $sub_total; ?>
+                                    
                                     <tr>
                                         <td>
-                                            <img src="admin_area/product_images/product.jpg" alt="">
+                                            <img src="admin_area/product_images/<?php echo $product_img1; ?>" alt="">
                                         </td>
                                         <td>
-                                            <a href="#">Cold Black Play T-Shirt</a>
+                                            <a href="#"><?php echo $product_title; ?></a>
                                         </td>
-                                        <td>2</td>
-                                        <td>$50.00</td>
-                                        <td>Large</td>
+                                        <td><?php echo $pro_qty; ?></td>
+                                        <td>$ <?php echo $price_only; ?></td>
+                                        <td><?php echo $pro_size; ?></td>
                                         <td>
-                                            <input type="checkbox" name="remove[]">
+                                            <input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>">
                                         </td>
-                                        <td>$100.00</td>
+                                        <td>$ <?php echo $sub_total; ?></td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <img src="admin_area/product_images/product.jpg" alt="">
-                                        </td>
-                                        <td>
-                                            <a href="#">Cold Black Play T-Shirt</a>
-                                        </td>
-                                        <td>2</td>
-                                        <td>$50.00</td>
-                                        <td>Large</td>
-                                        <td>
-                                            <input type="checkbox" name="remove[]">
-                                        </td>
-                                        <td>$150.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img src="admin_area/product_images/product.jpg" alt="">
-                                        </td>
-                                        <td>
-                                            <a href="#">Cold Black Play T-Shirt</a>
-                                        </td>
-                                        <td>2</td>
-                                        <td>$50.00</td>
-                                        <td>Large</td>
-                                        <td>
-                                            <input type="checkbox" name="remove[]">
-                                        </td>
-                                        <td>$150.00</td>
-                                    </tr>
+                                    <?php } } ?>
                                 </tbody>
                                 <tfoot>
                                     <tr>
@@ -105,51 +97,52 @@
                         </div>
                     </form>
                 </div>
+
+                <?php 
+
+                function update_cart(){
+                    global $con;
+                    if(isset($_POST['update'])){
+                        foreach($_POST['remove'] as $remove_id){
+                            $delete_product = "DELETE FROM cart WHERE p_id = '$remove_id'";
+                            $delete = mysqli_query($con, $delete_product);
+                            if($delete){
+                                echo "<script>window.open('cart.php','_self')</script>";
+                            }
+                        }
+                    }
+                }
+                echo @$up_cart = update_cart();
+                ?>
                 <div id="row same-height-row">
                     <div class="col-md-3 col-sm-6">
                         <div class="box same-height headline">
                             <h3 class="text-center">You may alse like these product</h3>
                         </div>
                     </div>
-                    <div class="center-responsive col-md-3 col-sm-6">
-                        <div class="product same-height">
-                            <a href="details.php">
-                                <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">Marvel Polo Black T-Shirt</a>
-                                </h3>
-                                <p class="price">50$</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="center-responsive col-md-3 col-sm-6">
-                        <div class="product same-height">
-                            <a href="details.php">
-                                <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">Marvel Polo Black T-Shirt</a>
-                                </h3>
-                                <p class="price">50$</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="center-responsive col-md-3 col-sm-6">
-                        <div class="product same-height">
-                            <a href="details.php">
-                                <img src="admin_area/product_images/product.jpg" alt="" class="img-responsive">
-                            </a>
-                            <div class="text">
-                                <h3>
-                                    <a href="details.php">Marvel Polo Black T-Shirt</a>
-                                </h3>
-                                <p class="price">50$</p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php 
+          $query = "SELECT * FROM products ORDER BY rand() LIMIT 0,3";
+          $result = mysqli_query($con, $query);
+          while($row = mysqli_fetch_array($result)){
+            $pro_id = $row['product_id'];
+            $pro_img1 = $row['product_img1'];
+            $pro_title = $row['product_title'];
+            $pro_price = $row['product_price'];
+          ?>
+          <div class="center-responsive col-md-3 col-sm-6">
+            <div class="product same-height">
+              <a href="details.php?pro_id=<?php echo $pro_id; ?>">
+                <img src="admin_area/product_images/<?php echo $pro_img1; ?>" alt="" class="img-responsive">
+              </a>
+              <div class="text">
+                <h3>
+                  <a href="details.php?pro_id=<?php echo $pro_id; ?>"><?php echo $pro_title; ?></a>
+                </h3>
+                <p class="price"><?php echo $pro_price; ?>$</p>
+              </div>
+            </div>
+          </div>
+        <?php } ?>
                 </div>
             </div>
             <!-- Col-md-9#cart ends-->
@@ -165,7 +158,7 @@
                             <tbody>
                                 <tr>
                                     <td> Order Subtotal </td>
-                                    <th> $250.00 </th>
+                                    <th> <?php totalPrice(); ?> </th>
                                 </tr>
                                 <tr>
                                     <td>Shipping and Handling</td>

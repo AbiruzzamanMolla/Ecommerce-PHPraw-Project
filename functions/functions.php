@@ -59,62 +59,63 @@ function items(){
 // total price function
 
 function totalPrice(){
-  global $db;
-  $ip_add = getRealIP();
-  $total = 0;
-  $select_cart = "SELECT * FROM cart WHERE ip_add = '$ip_add'";
-  $run = mysqli_query($db, $select_cart);
-  while($rec = mysqli_fetch_array($run)){
-    $p_id = $rec['p_id'];
-    $p_qty = $rec['qty'];
-    $get_price = "SELECT * FROM products WHERE product_id = '$p_id'";
-    $run = mysqli_query($db, $get_price);
-    while($row = mysqli_fetch_array($run)){
-    $sub_total = $row['product_price']*$p_qty;
-    $total += $sub_total;
-    }
-  }
-  echo "$".$total;
+global $db;
+
+$ip_add = getRealIP();
+
+$total = 0;
+
+$select_cart = "select * from cart where ip_add='$ip_add'";
+
+$run_cart = mysqli_query($db,$select_cart);
+
+while($record=mysqli_fetch_array($run_cart)){
+
+$pro_id = $record['p_id'];
+
+$pro_qty = $record['qty'];
+
+$get_price = "select * from products where product_id='$pro_id'";
+
+$run_price = mysqli_query($db,$get_price);
+
+while($row_price=mysqli_fetch_array($run_price)){
+
+
+$sub_total = $row_price['product_price']*$pro_qty;
+
+$total += $sub_total;
+
+
 
 }
 
 
-// function totalPrice(){
-
-// global $db;
-
-// $ip_add = getRealIP();
-
-// $total = 0;
-
-// $select_cart = "select * from cart where ip_add='$ip_add'";
-
-// $run_cart = mysqli_query($db,$select_cart);
-
-// while($record=mysqli_fetch_array($run_cart)){
-
-// $pro_id = $record['p_id'];
-
-// $pro_qty = $record['qty'];
-
-
-// $sub_total = $record['pro_price']*$pro_qty;
-
-// $total += $sub_total;
 
 
 
+}
 
+echo "$" . $total;
 
+  // global $db;
+  // $ip_add = getRealIP();
+  // $total = 0;
+  // $select_cart = "SELECT * FROM cart WHERE ip_add = '$ip_add'";
+  // $run = mysqli_query($db, $select_cart);
+  // while($rec = mysqli_fetch_array($run)){
+  //   $p_id = $rec['p_id'];
+  //   $p_qty = $rec['qty'];
+  //   $get_price = "SELECT * FROM products WHERE product_id = '$p_id'";
+  //   $run = mysqli_query($db, $get_price);
+  //   while($row = mysqli_fetch_array($run)){
+  //   $sub_total = $row['product_price']*$p_qty;
+  //   $total += $sub_total;
+  //   }
+  // }
+  // echo "$".$total;
 
-// }
-
-// echo "$" . $total;
-
-
-
-// }
-
+}
 
 //get all product for index page
 function getPro(){

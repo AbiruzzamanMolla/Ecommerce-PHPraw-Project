@@ -32,7 +32,7 @@ include "functions/functions.php";
       <!-- col md 6 offer starts -->
       <div class="col-md-6 offer">
         <a href="#" class="btn btn-success btn-sm"> Wellcome :Guest</a>
-        <a href="#">Shopping Cart Total Price: <?php totalPrice(); ?> $ Total Items: <?php items(); ?></a>
+        <a href="#">Shopping Cart Total Price: <?php totalPrice(); ?> Total Items: <?php items(); ?></a>
       </div>
       <!-- col md 6 offer ends -->
       <!-- col md 6 starts -->
