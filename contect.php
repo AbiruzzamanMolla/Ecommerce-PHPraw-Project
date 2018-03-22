@@ -1,122 +1,152 @@
+
 <?php include "includes/header.php"; ?>
-    <div id="content">
-        <!-- Content Start-->
-        <div class="container">
-            <!-- Container Start-->
-            <div class="col-md-12">
-                <!-- col-md-12 start-->
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="index.php">Home</a>
-                    </li>
-                    <li>
-                        Contact to us
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <?php include "includes/sidebar.php"; ?>
-            </div>
+<?php
+$note ="";
+?>
+    <?php
+if(isset($_POST['submit'])){
+    $sender_name = $_POST['name'];
+    $sender_email = $_POST['email'];
+    $sender_subject = $_POST['subject'];
+    $sender_mail = $_POST['message'];
 
-            <!-- col-md-12 ends-->
-            <div class="col-md-9">
-                <!-- col-md-9 Starts -->
+    $reciver_mail = "abiruzzaman.molla@gmail.com";
+    mail($reciver_mail, $sender_name, $sender_email, $sender_subject, $sender_mail);
 
-                <div class="box">
-                    <!-- box Starts -->
+    $email = $_POST['email'];
+    $subject = "Wellcome to my website";
+    $msg = "Id ipsum ad consequat quis minim proident velit reprehenderit duis sit fugiat Lorem. Ipsum tempor anim et id. Veniam enim elit cupidatat incididunt ex reprehenderit elit. Nulla cupidatat incididunt quis non ut reprehenderit eu ex veniam sit aliquip. Laboris eiusmod in velit dolore officia reprehenderit cupidatat deserunt duis quis. Fugiat mollit tempor ullamco reprehenderit minim sunt. Laborum elit duis veniam deserunt.
 
-                    <div class="box-header">
-                        <!-- box-header Starts -->
+In ullamco qui exercitation culpa ipsum aliqua aliqua esse ut veniam irure velit elit voluptate. Officia Lorem fugiat esse et ipsum Lorem tempor incididunt ullamco veniam ea. Ex et pariatur dolor tempor nulla. Tempor reprehenderit excepteur non nulla nostrud velit. Reprehenderit voluptate commodo excepteur velit ut ut adipisicing excepteur enim in elit officia nisi. Ipsum ad anim dolore esse amet laborum sunt qui. Fugiat incididunt cillum sit qui eiusmod irure commodo do proident reprehenderit incididunt cupidatat deserunt.
 
-                        <center>
-                            <!-- center Starts -->
+Mollit veniam ea dolore aute est culpa culpa proident reprehenderit reprehenderit. Do Lorem fugiat enim excepteur duis laborum voluptate excepteur quis. Velit veniam sunt eiusmod ipsum laboris aute nisi enim reprehenderit ad duis.";
+$from = "abiruzzaman.molla@gmailo.com";
 
-                            <h2>Contact Us </h2>
+mail($email, $subject, $msg, $from);
+$note = "Message send succesfully";
+}
+?>
+        <div id="content">
+            <!-- Content Start-->
+            <div class="container">
+                <!-- Container Start-->
+                <div class="col-md-12">
+                    <!-- col-md-12 start-->
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="index.php">Home</a>
+                        </li>
+                        <li>
+                            Contact to us
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <?php include "includes/sidebar.php"; ?>
+                </div>
+                <!-- col-md-12 ends-->
+                <div class="col-md-9">
+                    <!-- col-md-9 Starts -->
 
-                            <p class="text-muted">
-                                If you have any questions, please feel free to contact us, our customer service center is working for you 24/7.
+                    <div class="box">
+                        <!-- box Starts -->
 
-                            </p>
+                        <div class="box-header">
+                            <!-- box-header Starts -->
 
-                        </center>
-                        <!-- center Ends -->
+                            <center>
+                                <!-- center Starts -->
+
+                                <h2>Contact Us </h2>
+
+                                <p class="text-muted">
+                                    If you have any questions, please feel free to contact us, our customer service center is working for you 24/7.
+                                </p>
+                                <h1 style="color:red">
+                                    <?php echo $note; ?>
+                                </h1>
+
+                            </center>
+                            <!-- center Ends -->
+
+                        </div>
+                        <!-- box-header Ends -->
+
+                        <form action="contect.php" method="post">
+                            <!-- form Starts -->
+
+                            <div class="form-group">
+                                <!-- form-group Starts -->
+
+                                <label>Name</label>
+
+                                <input type="text" class="form-control" name="name" placeholder="Enter Your Full Name" required>
+
+                            </div>
+                            <!-- form-group Ends -->
+
+                            <div class="form-group">
+                                <!-- form-group Starts -->
+
+                                <label>Email</label>
+
+                                <input type="text" class="form-control" name="email" placeholder="example@email.com" required>
+
+                            </div>
+                            <!-- form-group Ends -->
+
+                            <div class="form-group">
+                                <!-- form-group Starts -->
+
+                                <label> Subject </label>
+
+                                <input type="text" class="form-control" name="subject" placeholder="Enter Subject" required>
+
+                            </div>
+                            <!-- form-group Ends -->
+
+                            <div class="form-group">
+                                <!-- form-group Starts -->
+
+                                <label> Message </label>
+
+                                <textarea class="form-control" name="message"> </textarea>
+
+                            </div>
+                            <!-- form-group Ends -->
+
+                            <div class="text-center">
+                                <!-- text-center Starts -->
+
+                                <button type="submit" name="submit" class="btn btn-primary">
+
+                                    <i class="fa fa-user-md"></i> Send Message
+
+                                </button>
+
+                            </div>
+                            <!-- text-center Ends -->
+
+                        </form>
+                        <!-- form Ends -->
 
                     </div>
-                    <!-- box-header Ends -->
-
-                    <form action="contact.php" method="post">
-                        <!-- form Starts -->
-
-                        <div class="form-group">
-                            <!-- form-group Starts -->
-
-                            <label>Name</label>
-
-                            <input type="text" class="form-control" name="name" placeholder="Enter Your Full Name" required>
-
-                        </div>
-                        <!-- form-group Ends -->
-
-                        <div class="form-group">
-                            <!-- form-group Starts -->
-
-                            <label>Email</label>
-
-                            <input type="text" class="form-control" name="email" placeholder="example@email.com" required>
-
-                        </div>
-                        <!-- form-group Ends -->
-
-                        <div class="form-group">
-                            <!-- form-group Starts -->
-
-                            <label> Subject </label>
-
-                            <input type="text" class="form-control" name="subject" placeholder="Enter Subject" required>
-
-                        </div>
-                        <!-- form-group Ends -->
-
-                        <div class="form-group">
-                            <!-- form-group Starts -->
-
-                            <label> Message </label>
-
-                            <textarea class="form-control" name="message"> </textarea>
-
-                        </div>
-                        <!-- form-group Ends -->
-
-                        <div class="text-center">
-                            <!-- text-center Starts -->
-
-                            <button type="submit" name="submit" class="btn btn-primary">
-
-                                <i class="fa fa-user-md"></i> Send Message
-
-                            </button>
-
-                        </div>
-                        <!-- text-center Ends -->
-
-                    </form>
-                    <!-- form Ends -->
+                    <!-- box Ends -->
 
                 </div>
-                <!-- box Ends -->
+                <!-- col-md-9 Ends -->
+
+
 
             </div>
-            <!-- col-md-9 Ends -->
-
-
-
+            <!-- Container Ends-->
         </div>
-        <!-- Container Ends-->
-    </div>
-    <!-- Content End-->
-    <?php include "includes/footer.php"; ?>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
+        <!-- Content End-->
+        <?php include "includes/footer.php"; ?>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        </body>
 
-</html>
+        </html>
+
+
