@@ -20,7 +20,7 @@
                 <div class="box">
                     <form action="cart.php" method="post" enctype="multipart-form-data">
                         <h1>Shopping Cart</h1>
-                        <p class="text-muted">You Currectly have 3 items in your cart.</p>
+                        <p class="text-muted">You Currectly have <?php items(); ?> items in your cart.</p>
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -83,7 +83,7 @@
                                 <tfoot>
                                     <tr>
                                         <th colspan="5">Total</th>
-                                        <th colspan="2">$ <?php totalPrice(); ?></th>
+                                        <th colspan="2"><?php totalPrice(); ?></th>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -177,7 +177,7 @@
                                 </tr>
                                 <tr class="total">
                                     <td>Total</td>
-                                    <th>$ <?php totalPrice(); ?></th>
+                                    <th><?php totalPrice(); ?></th>
                                 </tr>
                             </tbody>
                         </table>

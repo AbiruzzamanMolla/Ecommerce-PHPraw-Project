@@ -33,7 +33,7 @@ function add_cart(){
     $p_id = $_GET['add_cart'];
     $product_qty = $_POST['product_qty'];
     $product_size = $_POST['product_size'];
-    $check_product = "SELECT * FROM cart WHERE ip_add = '$ip_add' AND p_ip = '$p_id'";
+    $check_product = "SELECT * FROM cart WHERE ip_add = '$ip_add' AND p_id = '$p_id'";
     $run = mysqli_query($db, $check_product);
     if(mysqli_num_rows($run) > 0){
       echo "<script>alert('This Product is already added in cart')</script>";
@@ -55,7 +55,6 @@ function items(){
   $run = mysqli_query($db, $get_items);
   $count = mysqli_num_rows($run);
   echo $count;
-
 }
 // total price function
 
@@ -71,13 +70,50 @@ function totalPrice(){
     $get_price = "SELECT * FROM products WHERE product_id = '$p_id'";
     $run = mysqli_query($db, $get_price);
     while($row = mysqli_fetch_array($run)){
-      $sub_total = $row['product_price']*$p_qty;
-      $total += $sub_total;
+    $sub_total = $row['product_price']*$p_qty;
+    $total += $sub_total;
     }
   }
   echo "$".$total;
 
 }
+
+
+// function totalPrice(){
+
+// global $db;
+
+// $ip_add = getRealIP();
+
+// $total = 0;
+
+// $select_cart = "select * from cart where ip_add='$ip_add'";
+
+// $run_cart = mysqli_query($db,$select_cart);
+
+// while($record=mysqli_fetch_array($run_cart)){
+
+// $pro_id = $record['p_id'];
+
+// $pro_qty = $record['qty'];
+
+
+// $sub_total = $record['pro_price']*$pro_qty;
+
+// $total += $sub_total;
+
+
+
+
+
+
+// }
+
+// echo "$" . $total;
+
+
+
+// }
 
 
 //get all product for index page
@@ -178,10 +214,7 @@ function getCatPro(){
           </div>
         </div>
         </div>";
-
   }
-
-
   }
 }
 //get froduct for all categories
@@ -194,7 +227,6 @@ function getProCats(){
     $row = mysqli_fetch_array($run_cat);
     $cat_title = $row['cat_title'];
     $cat_desc = $row['cat_desc'];
-
     $get_product = "SELECT * FROM products WHERE cat_id = '$cat_id'";
     $run_product = mysqli_query($db, $get_product);
     $count = mysqli_num_rows($run_product);
