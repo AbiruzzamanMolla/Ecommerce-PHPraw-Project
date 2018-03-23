@@ -109,16 +109,16 @@ modern-e-commerce-store-in-php-mysqli-with-bootstrap
 │   ├── 103 Lecture-100.mp4 x
 │   ├── 104 Lecture-101.mp4 x
 │   ├── 105 Lecture-102.mp4 x
-│   ├── 106 Lecture-103.mp4
-│   ├── 107 Lecture-104.mp4
-│   ├── 108 Lecture-105.mp4
-│   ├── 109 Lecture-106.mp4
-│   ├── 110 Lecture-107.mp4
-│   ├── 111 Lecture-108.mp4
-│   ├── 112 Lecture-109.mp4
-│   ├── 113 Lecture-110.mp4
-│   ├── 114 Lecture-111.mp4
-│   └── 115 Lecture-112.mp4
+│   ├── 106 Lecture-103.mp4 x
+│   ├── 107 Lecture-104.mp4 x
+│   ├── 108 Lecture-105.mp4 x
+│   ├── 109 Lecture-106.mp4 x
+│   ├── 110 Lecture-107.mp4 x
+│   ├── 111 Lecture-108.mp4 x
+│   ├── 112 Lecture-109.mp4 x
+│   ├── 113 Lecture-110.mp4 x
+│   ├── 114 Lecture-111.mp4 x
+│   └── 115 Lecture-112.mp4 x
 ├── 04 Creation A Complete Admin Panel For Modern E-Commerce Store
 │   ├── 116 Lecture-113.mp4
 │   ├── 117 Lecture-114.mp4
