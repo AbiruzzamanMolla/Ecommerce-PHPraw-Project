@@ -31,7 +31,13 @@ include "functions/functions.php";
     <div class="container">
       <!-- col md 6 offer starts -->
       <div class="col-md-6 offer">
-        <a href="#" class="btn btn-success btn-sm"> Wellcome :Guest</a>
+        <a href="#" class="btn btn-success btn-sm"> <?php
+        if(!isset($_SESSION['customer_email'])){
+          echo "Wellcome :Guest ";
+        } else {
+          echo "Wellcome" . $_SESSION['customer_email'] ."";
+        }
+        ?> </a>
         <a href="#">Shopping Cart Total Price: <?php totalPrice(); ?> Total Items: <?php items(); ?></a>
       </div>
       <!-- col md 6 offer ends -->

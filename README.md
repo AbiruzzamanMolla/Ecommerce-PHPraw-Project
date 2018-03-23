@@ -95,8 +95,8 @@ modern-e-commerce-store-in-php-mysqli-with-bootstrap
 │   ├── 089 Lecture-86.mp4 x
 │   ├── 090 Lecture-87.mp4 x
 │   ├── 091 Lecture-88.mp4 x
-│   ├── 092 Lecture-89.mp4
-│   ├── 093 Lecture-90.mp4
+│   ├── 092 Lecture-89.mp4 x
+│   ├── 093 Lecture-90.mp4 x
 │   ├── 094 Lecture-91.mp4
 │   ├── 095 Lecture-92.mp4
 │   ├── 096 Lecture-93.mp4

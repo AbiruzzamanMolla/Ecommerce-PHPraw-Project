@@ -1,10 +1,9 @@
 <?php
-/* 
+/*
 // INFO:
 //
 // Author: MD. Abiruzzaman Molla
 // Project: E-Commerce Site
-
 // TODO:
 //
 // [] add_cart problem
@@ -12,9 +11,7 @@
 */
 // init db connection
 $db = mysqli_connect("localhost","root","root","e_com");
-
 //IP address retriving
-
 function getRealIP(){
   switch(true){
     case (!empty($_SERVER['HTTP_X_REAL_IP'])) : return $_SERVER['HTTP_X_REAL_IP'];
@@ -23,9 +20,7 @@ function getRealIP(){
     default : return $_SERVER['REMOTE_ADDR'];
   }
 }
-
-// add cart function 
-
+// add cart function
 function add_cart(){
   global $db;
   if(isset($_GET['add_cart'])){
@@ -45,9 +40,7 @@ function add_cart(){
     }
   }
 }
-
-// items functions 
-
+// items functions
 function items(){
   global $db;
   $ip_add = getRealIP();
@@ -57,47 +50,23 @@ function items(){
   echo $count;
 }
 // total price function
-
 function totalPrice(){
 global $db;
-
 $ip_add = getRealIP();
-
 $total = 0;
-
 $select_cart = "select * from cart where ip_add='$ip_add'";
-
 $run_cart = mysqli_query($db,$select_cart);
-
 while($record=mysqli_fetch_array($run_cart)){
-
 $pro_id = $record['p_id'];
-
 $pro_qty = $record['qty'];
-
 $get_price = "select * from products where product_id='$pro_id'";
-
 $run_price = mysqli_query($db,$get_price);
-
 while($row_price=mysqli_fetch_array($run_price)){
-
-
 $sub_total = $row_price['product_price']*$pro_qty;
-
 $total += $sub_total;
-
-
-
 }
-
-
-
-
-
 }
-
 echo "$" . $total;
-
   // global $db;
   // $ip_add = getRealIP();
   // $total = 0;
@@ -114,9 +83,7 @@ echo "$" . $total;
   //   }
   // }
   // echo "$".$total;
-
 }
-
 //get all product for index page
 function getPro(){
     global $db;
@@ -133,7 +100,6 @@ function getPro(){
           <a href='details.php?pro_id=$pro_id'>
             <img src='admin_area/product_images/$pro_img1' alt='' class='img-responsive'>
           </a>
-
           <div class='text'>
             <h3>
               <a href='details.php?pro_id=$pro_id'>$pro_title</a>
@@ -182,7 +148,6 @@ function getCatPro(){
     $row = mysqli_fetch_array($run_p_cat);
     $p_cat_title = $row['p_cat_title'];
     $p_cat_desc = $row['p_cat_desc'];
-
     $get_product = "SELECT * FROM products WHERE p_cat_id = '$p_cat_id'";
     $run_product = mysqli_query($db, $get_product);
     $count = mysqli_num_rows($run_product);
@@ -260,10 +225,7 @@ function getProCats(){
           </div>
         </div>
         </div>";
-
   }
-
-
   }
 }
 ?>
