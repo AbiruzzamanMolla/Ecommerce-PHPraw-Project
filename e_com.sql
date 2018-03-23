@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 20, 2018 at 01:33 PM
+-- Generation Time: Mar 23, 2018 at 09:26 AM
 -- Server version: 10.2.13-MariaDB-10.2.13+maria~artful-log
 -- PHP Version: 7.1.15-0ubuntu0.17.10.1
 
@@ -19,6 +19,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `e_com`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `p_id` int(10) NOT NULL,
+  `ip_add` varchar(255) NOT NULL,
+  `qty` int(10) NOT NULL,
+  `size` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -41,6 +54,83 @@ INSERT INTO `categories` (`cat_id`, `cat_title`, `cat_desc`) VALUES
 (2, 'Woman', 'Sunt amet velit magna aliqua nostrud id sunt reprehenderit. Enim non aute quis officia cupidatat sit laboris ullamco cillum commodo. Ipsum reprehenderit adipisicing cillum dolor veniam sint est. Dolor anim deserunt laboris dolore et fugiat amet quis consequat mollit duis.'),
 (3, 'Kids', 'Sunt amet velit magna aliqua nostrud id sunt reprehenderit. Enim non aute quis officia cupidatat sit laboris ullamco cillum commodo. Ipsum reprehenderit adipisicing cillum dolor veniam sint est. Dolor anim deserunt laboris dolore et fugiat amet quis consequat mollit duis.'),
 (4, 'Others', 'Sunt amet velit magna aliqua nostrud id sunt reprehenderit. Enim non aute quis officia cupidatat sit laboris ullamco cillum commodo. Ipsum reprehenderit adipisicing cillum dolor veniam sint est. Dolor anim deserunt laboris dolore et fugiat amet quis consequat mollit duis.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customers`
+--
+
+CREATE TABLE `customers` (
+  `customer_id` int(10) NOT NULL,
+  `customer_name` varchar(255) NOT NULL,
+  `customer_email` varchar(255) NOT NULL,
+  `customer_pass` varchar(255) NOT NULL,
+  `customer_country` text NOT NULL,
+  `customer_city` text NOT NULL,
+  `customer_contact` varchar(255) NOT NULL,
+  `customer_address` text NOT NULL,
+  `customer_image` text NOT NULL,
+  `customer_ip` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customers`
+--
+
+INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`, `customer_ip`) VALUES
+(1, 'Md. Abiruzzaman Molla', 'abiruzzaman.molla@gmail.com', 'abir', 'Bangladesh', 'Feni', 'afdfsdfdf', 'dasfsdfdfs', 'john_cena.jpg', '::1'),
+(2, 'Brok', 'bra@dsafdsf.gm', 'rootfdafsdf', 'Bosnia and Herzegowina', 'dfas', 'fsdfsd', 'fdsffdfdsfds', '22582156_1954167981472936_7572288438204891136_n.jpg', '::1'),
+(3, 'Md. Abiruzzaman Molla', 'dfadsfddsfd@fsdgfd.hh', 'root', 'Bangladesh', 'Feni', 'fsdgdfg', 'fgdfsg', 'ubuntu_14_04_gray_wallpaper.jpg', '::1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer_orders`
+--
+
+CREATE TABLE `customer_orders` (
+  `order_id` int(10) NOT NULL,
+  `customer_id` int(10) NOT NULL,
+  `due_amount` int(100) NOT NULL,
+  `invoice_no` int(100) NOT NULL,
+  `qty` int(10) NOT NULL,
+  `size` text NOT NULL,
+  `order_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `order_status` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customer_orders`
+--
+
+INSERT INTO `customer_orders` (`order_id`, `customer_id`, `due_amount`, `invoice_no`, `qty`, `size`, `order_date`, `order_status`) VALUES
+(2, 1, 490, 1099403513, 2, 'Small', '2018-03-23 06:14:11', 'pending'),
+(3, 1, 600, 1099403513, 3, 'medium', '2018-03-23 06:14:11', 'pending');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `panding_orders`
+--
+
+CREATE TABLE `panding_orders` (
+  `order_id` int(10) NOT NULL,
+  `customer_id` int(10) NOT NULL,
+  `invoice_no` int(10) NOT NULL,
+  `product_id` text NOT NULL,
+  `qty` int(100) NOT NULL,
+  `size` text NOT NULL,
+  `order_status` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `panding_orders`
+--
+
+INSERT INTO `panding_orders` (`order_id`, `customer_id`, `invoice_no`, `product_id`, `qty`, `size`, `order_status`) VALUES
+(1, 1, 1099403513, '28', 2, 'Small', 'pending'),
+(2, 1, 1099403513, '6', 3, 'medium', 'pending');
 
 -- --------------------------------------------------------
 
@@ -150,6 +240,24 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Indexes for table `customers`
+--
+ALTER TABLE `customers`
+  ADD PRIMARY KEY (`customer_id`);
+
+--
+-- Indexes for table `customer_orders`
+--
+ALTER TABLE `customer_orders`
+  ADD PRIMARY KEY (`order_id`);
+
+--
+-- Indexes for table `panding_orders`
+--
+ALTER TABLE `panding_orders`
+  ADD PRIMARY KEY (`order_id`);
+
+--
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -176,6 +284,21 @@ ALTER TABLE `slider`
 --
 ALTER TABLE `categories`
   MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `customers`
+--
+ALTER TABLE `customers`
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `customer_orders`
+--
+ALTER TABLE `customer_orders`
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `panding_orders`
+--
+ALTER TABLE `panding_orders`
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `products`
 --

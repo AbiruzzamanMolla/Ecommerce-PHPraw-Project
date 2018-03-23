@@ -1,17 +1,33 @@
 <div class="panel panel-default sidebar-menu"><!-- panel panel-default sidebar-menu Starts -->
 
 <div class="panel-heading"><!-- panel-heading Starts -->
+<?php
+$customer_session = $_SESSION['customer_email'];
 
+$get_customer = "SELECT * FROM customers WHERE customer_email = '$customer_session'";
+
+$run = mysqli_query($con, $get_customer);
+$row = mysqli_fetch_array($run);
+
+$image = $row['customer_image'];
+$name = $row['customer_name'];
+
+if(!isset($_SESSION['customer_email'])){
+
+} else {
+echo "
 <center>
 
-<img src='customer_images/download.jpg' class='img-responsive'>
+<img src='customer_images/$image' class='img-responsive'>
 
 </center>
 
 <br>
 
-<h3 align='center' class='panel-title'> Name : Abiruzzaman Molla </h3>
+<h3 align='center' class='panel-title'> Name : $name </h3>
+"; }
 
+?>
 
 </div><!-- panel-heading Ends -->
 
@@ -51,7 +67,7 @@
 
 <li>
 
-<a href="logout.php"> <i class="fa fa-sign-out"></i> Logout </a>
+<a href="../logout.php"> <i class="fa fa-sign-out"></i> Logout </a>
 
 </li>
 
