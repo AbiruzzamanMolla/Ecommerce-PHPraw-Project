@@ -1,11 +1,8 @@
-<?php
-session_start();
-?>
 <?php include "includes/header.php"; ?>
 <?php
 $note ="";
 ?>
-    <?php
+<?php
 if(isset($_POST['submit'])){
     $sender_name = $_POST['name'];
     $sender_email = $_POST['email'];
@@ -19,9 +16,9 @@ if(isset($_POST['submit'])){
     $subject = "Wellcome to my website";
     $msg = "Id ipsum ad consequat quis minim proident velit reprehenderit duis sit fugiat Lorem. Ipsum tempor anim et id. Veniam enim elit cupidatat incididunt ex reprehenderit elit. Nulla cupidatat incididunt quis non ut reprehenderit eu ex veniam sit aliquip. Laboris eiusmod in velit dolore officia reprehenderit cupidatat deserunt duis quis. Fugiat mollit tempor ullamco reprehenderit minim sunt. Laborum elit duis veniam deserunt.
 
-In ullamco qui exercitation culpa ipsum aliqua aliqua esse ut veniam irure velit elit voluptate. Officia Lorem fugiat esse et ipsum Lorem tempor incididunt ullamco veniam ea. Ex et pariatur dolor tempor nulla. Tempor reprehenderit excepteur non nulla nostrud velit. Reprehenderit voluptate commodo excepteur velit ut ut adipisicing excepteur enim in elit officia nisi. Ipsum ad anim dolore esse amet laborum sunt qui. Fugiat incididunt cillum sit qui eiusmod irure commodo do proident reprehenderit incididunt cupidatat deserunt.
+    In ullamco qui exercitation culpa ipsum aliqua aliqua esse ut veniam irure velit elit voluptate. Officia Lorem fugiat esse et ipsum Lorem tempor incididunt ullamco veniam ea. Ex et pariatur dolor tempor nulla. Tempor reprehenderit excepteur non nulla nostrud velit. Reprehenderit voluptate commodo excepteur velit ut ut adipisicing excepteur enim in elit officia nisi. Ipsum ad anim dolore esse amet laborum sunt qui. Fugiat incididunt cillum sit qui eiusmod irure commodo do proident reprehenderit incididunt cupidatat deserunt.
 
-Mollit veniam ea dolore aute est culpa culpa proident reprehenderit reprehenderit. Do Lorem fugiat enim excepteur duis laborum voluptate excepteur quis. Velit veniam sunt eiusmod ipsum laboris aute nisi enim reprehenderit ad duis.";
+    Mollit veniam ea dolore aute est culpa culpa proident reprehenderit reprehenderit. Do Lorem fugiat enim excepteur duis laborum voluptate excepteur quis. Velit veniam sunt eiusmod ipsum laboris aute nisi enim reprehenderit ad duis.";
 $from = "abiruzzaman.molla@gmailo.com";
 
 mail($email, $subject, $msg, $from);

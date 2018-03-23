@@ -1,5 +1,11 @@
 <?php include "includes/header.php"; ?>
 
+<?php
+if(!isset($_SESSION['customer_email'])){
+    echo "<script>window.open('../checkout.php', '_self')</script>";
+} else {
+    ?>
+
     <div id="content">
         <!-- Content Start-->
         <div class="container">
@@ -75,3 +81,6 @@ include "../includes/footer.php";
 </body>
 
 </html>
+
+<?php }
+?>

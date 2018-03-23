@@ -1,16 +1,17 @@
 <?php
+session_start();
+?>
+<?php
 include "includes/db.php";
 include "../functions/functions.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>E-Commerce Store</title>
-
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/fontawesome.min.css">
@@ -22,9 +23,7 @@ include "../functions/functions.php";
     <!-- Bootstrap JS 3.3.7 -->
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   -->
-
 </head>
-
 <body>
     <!-- top starts -->
     <div id="top">
@@ -36,7 +35,7 @@ include "../functions/functions.php";
         if(!isset($_SESSION['customer_email'])){
           echo "Wellcome :Guest ";
         } else {
-          echo "Wellcome" . $_SESSION['customer_email'] ."";
+          echo "Wellcome " . $_SESSION['customer_email'] ."";
         }
         ?></a>
                 <a href="#">Shopping Cart Total Price: $  <?php totalPrice(); ?> Total Items: <?php items(); ?></a>
@@ -50,13 +49,26 @@ include "../functions/functions.php";
                         <a href="../customer_register.php">Registation</a>
                     </li>
                     <li>
-                        <a href="my_account.php">My Account</a>
+                       <?php
+                            if(!isset($_SESSION['customer_email'])){
+                            echo "<a href='../checkout.php'>My Account</a>";
+                            }
+                            else{
+                            echo "<a href='my_account.php?my_orders'>My Account</a>";
+                            }
+                            ?>
                     </li>
                     <li>
                         <a href="../cart.php">Go To Cart</a>
                     </li>
                     <li>
-                        <a href="../checkout.php">Login</a>
+                    <?php
+                    if(!isset($_SESSION['customer_email'])){
+                        echo '<a href="../checkout.php">Login</a>';
+                    } else {
+                        echo '<a href="../logout.php">Logout</a>';
+                    }
+                    ?>
                     </li>
                 </ul>
                 <!-- menu ends -->
@@ -77,23 +89,14 @@ include "../functions/functions.php";
                     <img src="images/title.png" alt="title" class="hidden-xs" height="30px" width="100px">
                     <img src="images/title1.png" alt="title" class="visible-xs">
                 </a>
-
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
-
                     <span class="sr-only">Toggle Navigation </span>
-
                     <i class="fa fa-align-justify"></i>
-
                 </button>
-
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
-
                     <span class="sr-only">Toggle Search</span>
-
                     <i class="fa fa-search"></i>
-
                 </button>
-
             </div>
             <!--navbar header ends-->
             <!--navbar-collapse collapse starts-->
@@ -109,12 +112,18 @@ include "../functions/functions.php";
                             <a href="../shop.php"> Shop </a>
                         </li>
                         <li>
-                            <a href="my_account.php"> My Account </a>
+                            <?php
+                            if(!isset($_SESSION['customer_email'])){
+                            echo "<a href='../checkout.php'>My Account</a>";
+                            }
+                            else{
+                            echo "<a href='my_account.php?my_orders'>My Account</a>";
+                            }
+                            ?>
                         </li>
                         <li class="active">
                             <a href="../cart.php"> Shopping Cart </a>
                         </li>
-
                         <li>
                             <a href="../contect.php"> Contact Us </a>
                         </li>
@@ -157,7 +166,6 @@ include "../functions/functions.php";
                 <!--collapse clearfix ends-->
             </div>
             <!--navbar-collapse collapse ends-->
-
         </div>
         <!-- Container ends-->
     </div>

@@ -97,18 +97,18 @@ modern-e-commerce-store-in-php-mysqli-with-bootstrap
 │   ├── 091 Lecture-88.mp4 x
 │   ├── 092 Lecture-89.mp4 x
 │   ├── 093 Lecture-90.mp4 x
-│   ├── 094 Lecture-91.mp4
-│   ├── 095 Lecture-92.mp4
-│   ├── 096 Lecture-93.mp4
-│   ├── 097 Lecture-94.mp4
-│   ├── 098 Lecture-95.mp4
-│   ├── 099 Lecture-96.mp4
-│   ├── 100 Lecture-97.mp4
-│   ├── 101 Lecture-98.mp4
-│   ├── 102 Lecture-99.mp4
-│   ├── 103 Lecture-100.mp4
-│   ├── 104 Lecture-101.mp4
-│   ├── 105 Lecture-102.mp4
+│   ├── 094 Lecture-91.mp4 x
+│   ├── 095 Lecture-92.mp4 x
+│   ├── 096 Lecture-93.mp4 x
+│   ├── 097 Lecture-94.mp4 x
+│   ├── 098 Lecture-95.mp4 x
+│   ├── 099 Lecture-96.mp4 x
+│   ├── 100 Lecture-97.mp4 x
+│   ├── 101 Lecture-98.mp4 x
+│   ├── 102 Lecture-99.mp4 x
+│   ├── 103 Lecture-100.mp4 x
+│   ├── 104 Lecture-101.mp4 x
+│   ├── 105 Lecture-102.mp4 x
 │   ├── 106 Lecture-103.mp4
 │   ├── 107 Lecture-104.mp4
 │   ├── 108 Lecture-105.mp4
@@ -188,196 +188,6 @@ modern-e-commerce-store-in-php-mysqli-with-bootstrap
 │   ├── 181 Lecture-178.mp4
 │   └── 182 First Section Closing Video.mp4
 ├── 05 First Section Source Code And Database Files
-│   ├── 183 First Section Source Code And Database Files.html
-│   └── attached_files
-│   └── 183 First Section Source Code And Database Files
-│   ├── First-Section-Source-Code-And-Database
-│   │   └── First Section Source Code And Database
-│   │   ├── Ecom_store
-│   │   │   ├── admin_area
-│   │   │   │   ├── admin_images
-│   │   │   │   │   ├── Kareena.jpg
-│   │   │   │   │   ├── Salman-2.jpg
-│   │   │   │   │   ├── salman.jpg
-│   │   │   │   │   └── sohail.jpg
-│   │   │   │   ├── css
-│   │   │   │   │   ├── bootstrap.min.css
-│   │   │   │   │   ├── login.css
-│   │   │   │   │   └── style.css
-│   │   │   │   ├── customer_delete.php
-│   │   │   │   ├── dashboard.php
-│   │   │   │   ├── delete_cat.php
-│   │   │   │   ├── delete_p_cat.php
-│   │   │   │   ├── delete_product.php
-│   │   │   │   ├── delete_slide.php
-│   │   │   │   ├── edit_cat.php
-│   │   │   │   ├── edit_p_cat.php
-│   │   │   │   ├── edit_product.php
-│   │   │   │   ├── edit_slide.php
-│   │   │   │   ├── font-awesome
-│   │   │   │   │   ├── css
-│   │   │   │   │   │   └── font-awesome.min.css
-│   │   │   │   │   └── fonts
-│   │   │   │   │   ├── FontAwesome.otf
-│   │   │   │   │   ├── fontawesome-webfont.eot
-│   │   │   │   │   ├── fontawesome-webfont.svg
-│   │   │   │   │   ├── fontawesome-webfont.ttf
-│   │   │   │   │   ├── fontawesome-webfont.woff
-│   │   │   │   │   └── fontawesome-webfont.woff2
-│   │   │   │   ├── includes
-│   │   │   │   │   ├── db.php
-│   │   │   │   │   └── sidebar.php
-│   │   │   │   ├── index.php
-│   │   │   │   ├── insert_cat.php
-│   │   │   │   ├── insert_p_cat.php
-│   │   │   │   ├── insert_product.php
-│   │   │   │   ├── insert_slide.php
-│   │   │   │   ├── insert_user.php
-│   │   │   │   ├── js
-│   │   │   │   │   ├── bootstrap.min.js
-│   │   │   │   │   └── jquery.min.js
-│   │   │   │   ├── login.php
-│   │   │   │   ├── logout.php
-│   │   │   │   ├── order_delete.php
-│   │   │   │   ├── payment_delete.php
-│   │   │   │   ├── product_images
-│   │   │   │   │   ├── Black Blouse Versace Coat1.jpg
-│   │   │   │   │   ├── Black Blouse Versace Coat2.jpg
-│   │   │   │   │   ├── Black Blouse Versace Coat3.jpg
-│   │   │   │   │   ├── fur coat with button1.jpg
-│   │   │   │   │   ├── fur coat with button2.jpg
-│   │   │   │   │   ├── fur coat with button3.jpg
-│   │   │   │   │   ├── Gini-1.jpg
-│   │   │   │   │   ├── Gini-2.jpg
-│   │   │   │   │   ├── Gini-3.jpg
-│   │   │   │   │   ├── Jack---Jones-White-Solid-Denim-Jacket-3115-5549091-1-pdp_slider_l.jpg
-│   │   │   │   │   ├── Jack---Jones-White-Solid-Denim-Jacket-3115-5549091-2-pdp_slider_l.jpg
-│   │   │   │   │   ├── Jack---Jones-White-Solid-Denim-Jacket-3115-5549091-3-pdp_slider_l.jpg
-│   │   │   │   │   ├── Levi-s-Blue-Solid-Denim-Jacket-5953-6506172-1-pdp_slider_l.jpg
-│   │   │   │   │   ├── Levi-s-Blue-Solid-Denim-Jacket-5953-6506172-2-pdp_slider_l.jpg
-│   │   │   │   │   ├── Levi-s-Blue-Solid-Denim-Jacket-5953-6506172-3-pdp_slider_l.jpg
-│   │   │   │   │   ├── Mishmi Navy Blue Medium Satchel Bag 1.jpg
-│   │   │   │   │   ├── Mishmi Navy Blue Medium Satchel Bag 2.jpg
-│   │   │   │   │   ├── Mishmi Navy Blue Medium Satchel Bag 3.jpg
-│   │   │   │   │   ├── Next-Denim-Borg-Lined-Western-Jacket-0463-0064553-1-pdp_slider_l.jpg
-│   │   │   │   │   ├── Next-Denim-Borg-Lined-Western-Jacket-0463-0064553-2-pdp_slider_l.jpg
-│   │   │   │   │   ├── Next-Denim-Borg-Lined-Western-Jacket-0465-0064553-3-pdp_slider_l.jpg
-│   │   │   │   │   ├── product2.jpg
-│   │   │   │   │   ├── product3.jpg
-│   │   │   │   │   ├── product.jpg
-│   │   │   │   │   ├── T-shirt1.jpg
-│   │   │   │   │   ├── T-shirt2.jpg
-│   │   │   │   │   ├── T-shirt3.jpg
-│   │   │   │   │   ├── United-Colors-of-Benetton-White-Polo-Shirt-0608-0914361-1-pdp_slider_l.jpg
-│   │   │   │   │   ├── United-Colors-of-Benetton-White-Polo-Shirt-0608-0914361-2-pdp_slider_l.jpg
-│   │   │   │   │   ├── United-Colors-of-Benetton-White-Polo-Shirt-0609-0914361-3-pdp_slider_l.jpg
-│   │   │   │   │   ├── U-S--Polo-Assn--Blue-Polos-0266-586842-1-pdp_slider_l.jpg
-│   │   │   │   │   ├── U-S--Polo-Assn--Blue-Polos-0268-586842-2-pdp_slider_l.jpg
-│   │   │   │   │   └── U-S--Polo-Assn--Blue-Polos-0271-586842-3-pdp_slider_l.jpg
-│   │   │   │   ├── slides_images
-│   │   │   │   │   ├── 1.jpg
-│   │   │   │   │   ├── 2.jpg
-│   │   │   │   │   ├── 3.jpg
-│   │   │   │   │   ├── 4.jpg
-│   │   │   │   │   └── slide-5.jpg
-│   │   │   │   ├── user_delete.php
-│   │   │   │   ├── user_profile.php
-│   │   │   │   ├── view_cats.php
-│   │   │   │   ├── view_customers.php
-│   │   │   │   ├── view_orders.php
-│   │   │   │   ├── view_payments.php
-│   │   │   │   ├── view_p_cats.php
-│   │   │   │   ├── view_products.php
-│   │   │   │   ├── view_slides.php
-│   │   │   │   └── view_users.php
-│   │   │   ├── cart.php
-│   │   │   ├── checkout.php
-│   │   │   ├── contact.php
-│   │   │   ├── customer
-│   │   │   │   ├── change_pass.php
-│   │   │   │   ├── confirm.php
-│   │   │   │   ├── customer_images
-│   │   │   │   │   ├── brock_lesnar.jpg
-│   │   │   │   │   ├── Brock-Lesnar.jpg
-│   │   │   │   │   ├── download.jpg
-│   │   │   │   │   └── john_cena.jpg
-│   │   │   │   ├── customer_login.php
-│   │   │   │   ├── delete_account.php
-│   │   │   │   ├── edit_account.php
-│   │   │   │   ├── font-awesome
-│   │   │   │   │   ├── css
-│   │   │   │   │   │   └── font-awesome.min.css
-│   │   │   │   │   └── fonts
-│   │   │   │   │   ├── FontAwesome.otf
-│   │   │   │   │   ├── fontawesome-webfont.eot
-│   │   │   │   │   ├── fontawesome-webfont.svg
-│   │   │   │   │   ├── fontawesome-webfont.ttf
-│   │   │   │   │   ├── fontawesome-webfont.woff
-│   │   │   │   │   └── fontawesome-webfont.woff2
-│   │   │   │   ├── fonts
-│   │   │   │   │   ├── glyphicons-halflings-regular.eot
-│   │   │   │   │   ├── glyphicons-halflings-regular.svg
-│   │   │   │   │   ├── glyphicons-halflings-regular.ttf
-│   │   │   │   │   ├── glyphicons-halflings-regular.woff
-│   │   │   │   │   └── glyphicons-halflings-regular.woff2
-│   │   │   │   ├── functions
-│   │   │   │   │   └── functions.php
-│   │   │   │   ├── images
-│   │   │   │   │   ├── logo.png
-│   │   │   │   │   └── logo-small.png
-│   │   │   │   ├── includes
-│   │   │   │   │   ├── db.php
-│   │   │   │   │   ├── footer.php
-│   │   │   │   │   └── sidebar.php
-│   │   │   │   ├── js
-│   │   │   │   │   ├── bootstrap.min.js
-│   │   │   │   │   └── jquery.min.js
-│   │   │   │   ├── logout.php
-│   │   │   │   ├── my_account.php
-│   │   │   │   ├── my_orders.php
-│   │   │   │   ├── pay_offline.php
-│   │   │   │   └── styles
-│   │   │   │   ├── bootstrap.min.css
-│   │   │   │   └── style.css
-│   │   │   ├── customer_register.php
-│   │   │   ├── details.php
-│   │   │   ├── font-awesome
-│   │   │   │   ├── css
-│   │   │   │   │   └── font-awesome.min.css
-│   │   │   │   └── fonts
-│   │   │   │   ├── FontAwesome.otf
-│   │   │   │   ├── fontawesome-webfont.eot
-│   │   │   │   ├── fontawesome-webfont.svg
-│   │   │   │   ├── fontawesome-webfont.ttf
-│   │   │   │   ├── fontawesome-webfont.woff
-│   │   │   │   └── fontawesome-webfont.woff2
-│   │   │   ├── fonts
-│   │   │   │   ├── glyphicons-halflings-regular.eot
-│   │   │   │   ├── glyphicons-halflings-regular.svg
-│   │   │   │   ├── glyphicons-halflings-regular.ttf
-│   │   │   │   ├── glyphicons-halflings-regular.woff
-│   │   │   │   └── glyphicons-halflings-regular.woff2
-│   │   │   ├── functions
-│   │   │   │   └── functions.php
-│   │   │   ├── images
-│   │   │   │   ├── logo.png
-│   │   │   │   ├── logo-small.png
-│   │   │   │   └── paypal.png
-│   │   │   ├── includes
-│   │   │   │   ├── db.php
-│   │   │   │   ├── footer.php
-│   │   │   │   └── sidebar.php
-│   │   │   ├── index.php
-│   │   │   ├── js
-│   │   │   │   ├── bootstrap.min.js
-│   │   │   │   └── jquery.min.js
-│   │   │   ├── logout.php
-│   │   │   ├── order.php
-│   │   │   ├── payment_options.php
-│   │   │   ├── shop.php
-│   │   │   └── styles
-│   │   │   ├── bootstrap.min.css
-│   │   │   └── style.css
 │   │   ├── ecom_store.sql
 │   │   └── Ecom_store.zip
 │   └── First-Section-Source-Code-And-Database.zip

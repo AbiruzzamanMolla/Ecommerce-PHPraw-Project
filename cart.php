@@ -1,4 +1,4 @@
-<?php include "includes/header.php"; ?> 
+<?php include "includes/header.php"; ?>
     <div id="content">
         <!-- Content Start-->
         <div class="container">
@@ -40,7 +40,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php 
+                                <?php
                                 $total = 0;
                                 while($row_cart = mysqli_fetch_array($run_cart)){
                                     $pro_id = $row_cart['p_id'];
@@ -54,7 +54,6 @@
                                         $price_only = $row_pro['product_price'];
                                         $sub_total = $row_pro['product_price']*$pro_qty;
                                         $total += $sub_total; ?>
-                                    
                                     <tr>
                                         <td>
                                             <img src="admin_area/product_images/<?php echo $product_img1; ?>" alt="">
@@ -97,9 +96,7 @@
                         </div>
                     </form>
                 </div>
-
-                <?php 
-
+                <?php
                 function update_cart(){
                     global $con;
                     if(isset($_POST['update'])){
@@ -120,7 +117,7 @@
                             <h3 class="text-center">You may alse like these product</h3>
                         </div>
                     </div>
-                    <?php 
+                    <?php
           $query = "SELECT * FROM products ORDER BY rand() LIMIT 0,3";
           $result = mysqli_query($con, $query);
           while($row = mysqli_fetch_array($result)){
@@ -146,7 +143,6 @@
                 </div>
             </div>
             <!-- Col-md-9#cart ends-->
-
             <div class="col-md-3">
                 <div class="box" id="order-summary">
                     <div class="box-header">
