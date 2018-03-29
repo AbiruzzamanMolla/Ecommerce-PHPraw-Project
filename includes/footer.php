@@ -69,13 +69,13 @@
         <ul>
           <!-- ul Starts -->
           <?php
-            $get_p_cats = "SELECT * FROM product_categories";
-            $run_p_cats = mysqli_query($con,$get_p_cats);
-            while($row = mysqli_fetch_array($run_p_cats)){
-              $p_cat_id = $row['p_cat_id'];
-              $p_cat_title = $row['p_cat_title'];
-              echo "<li><a href='shop.php?p_cat=$p_cat_id'> $p_cat_title</a></li>";
-            }
+          $get_p_cats = "SELECT * FROM product_categories";
+          $run_p_cats = mysqli_query($con, $get_p_cats);
+          while ($row = mysqli_fetch_array($run_p_cats)) {
+            $p_cat_id = $row['p_cat_id'];
+            $p_cat_title = $row['p_cat_title'];
+            echo "<li><a href='shop.php?p_cat=$p_cat_id'> $p_cat_title</a></li>";
+          }
           ?>
           
         </ul>
@@ -216,3 +216,6 @@
 
 </div>
 <!-- copyright Ends -->
+<script>
+    document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:80}/livereload.js?snipver=1"></' + 'script>')
+</script>
