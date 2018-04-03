@@ -1,3 +1,7 @@
+<?php
+session_start();
+include("includes/db.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,7 +144,7 @@ form {
 }</style>
 </head>
 <body>
-    <form>
+    <form action="" method="post">
 	<div class="svgContainer">
 		<div>
 			<svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
@@ -618,17 +622,17 @@ initLoginForm();
 
 <?php
 if (isset($_POST['admin_login'])) {
-    $admin_email = mysqli_real_escape_string($con, $_POST['admin_email']);
-    $admin_pass = mysqli_real_escape_string($con, $_POST['admin_pass']);
-    $get_admin = "select * from admins where admin_email='$admin_email' AND admin_pass='$admin_pass'";
-    $run_admin = mysqli_query($con, $get_admin);
-    $count = mysqli_num_rows($run_admin);
-    if ($count == 1) {
-        $_SESSION['admin_email'] = $admin_email;
-        echo "<script>alert('You are Logged in into admin panel')</script>";
-        echo "<script>window.open('index.php?dashboard','_self')</script>";
-    } else {
-        echo "<script>alert('Email or Password is Wrong')</script>";
-    }
+	$admin_email = mysqli_real_escape_string($con, $_POST['admin_email']);
+	$admin_pass = mysqli_real_escape_string($con, $_POST['admin_pass']);
+	$get_admin = "select * from admins where admin_email='$admin_email' AND admin_pass='$admin_pass'";
+	$run_admin = mysqli_query($con, $get_admin);
+	$count = mysqli_num_rows($run_admin);
+	if ($count == 1) {
+		$_SESSION['admin_email'] = $admin_email;
+		echo "<script>alert('You are Logged in into admin panel')</script>";
+		echo "<script>window.open('index.php?dashboard','_self')</script>";
+	} else {
+		echo "<script>alert('Email or Password is Wrong')</script>";
+	}
 }
 ?>

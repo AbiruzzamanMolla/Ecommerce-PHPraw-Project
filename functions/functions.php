@@ -1,9 +1,9 @@
 <?php
 /*
 // INFO:
-//
 // Author: MD. Abiruzzaman Molla
 // Project: E-Commerce Site
+//
 // TODO:
 //
 // [] add_cart problem
