@@ -18,21 +18,23 @@
         <?php
         $get_slides = "SELECT * FROM slider LIMIT 0,1";
         $run_slides = mysqli_query($con, $get_slides);
-        while($row_slides = mysqli_fetch_array($run_slides)){
+        while ($row_slides = mysqli_fetch_array($run_slides)) {
           $slides_name = $row_slides['slide_name'];
           $slides_image = $row_slides['slide_image'];
+          $slides_url = $row_slides['slide_url'];
 
-          echo "<div class='item active'><img src='admin_area/slides_images/$slides_image' alt='$slides_name'></div>";
+          echo "<div class='item active'><a href='$slides_url'><img src='admin_area/slides_images/$slides_image' alt='$slides_name'></a></div>";
         }
         ?>
         <?php
         $get_slides = "SELECT * FROM slider LIMIT 1,4";
         $run_slides = mysqli_query($con, $get_slides);
-        while($row_slides = mysqli_fetch_array($run_slides)){
+        while ($row_slides = mysqli_fetch_array($run_slides)) {
           $slides_name = $row_slides['slide_name'];
           $slides_image = $row_slides['slide_image'];
+          $slides_url = $row_slides['slide_url'];
 
-          echo "<div class='item'><img src='admin_area/slides_images/$slides_image' alt='$slides_name'></div>";
+          echo "<div class='item'><a href='$slides_url'><img src='admin_area/slides_images/$slides_image' alt='$slides_name'></a></div>";
         }
         ?>
         </div>

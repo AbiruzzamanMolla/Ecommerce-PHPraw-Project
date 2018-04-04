@@ -5,10 +5,9 @@
 // Project: E-Commerce Site
 //
 // TODO:
-//
-// [] add_cart problem
-// [] lecture number 79
 */
+
+
 // init db connection
 $db = mysqli_connect("localhost","root","root","e_com");
 //IP address retriving
