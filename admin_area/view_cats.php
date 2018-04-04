@@ -52,7 +52,7 @@ if (!isset($_SESSION['admin_email'])) {
                                 <!-- tbody Starts -->
                                 <?php 
                                 $i = 0;
-                                $get_cats = "select * from categories";
+                                $get_cats = "SELECT * FROM categories";
                                 $run_cats = mysqli_query($con, $get_cats);
                                 while ($row_cats = mysqli_fetch_array($run_cats)) {
                                     $cat_id = $row_cats['cat_id'];
