@@ -1,219 +1,206 @@
-<div id="footer">
-  <!-- footer Starts -->
-  <div class="container">
-    <!-- container Starts -->
 
-    <div class="row">
-      <!-- row Starts -->
+<div id="footer"><!-- footer Starts -->
+<div class="container"><!-- container Starts -->
 
-      <div class="col-md-3 col-sm-6">
-        <!-- col-md-3 col-sm-6 Starts -->
+<div class="row" ><!-- row Starts -->
 
-        <h4>Pages</h4>
+<div class="col-md-3 col-sm-6" ><!-- col-md-3 col-sm-6 Starts -->
 
-        <ul>
-          <!-- ul Starts -->
+<h4>Pages</h4>
 
-          <li>
-            <a href="cart.php">Shopping Cart</a>
-          </li>
+<ul><!-- ul Starts -->
 
-          <li>
-            <a href="contact.php">Contact Us</a>
-          </li>
+<li><a href="../cart.php">Shopping Cart</a></li>
 
-          <li>
-            <a href="shop.php">Shop</a>
-          </li>
+<li><a href="../contact.php">Contact Us</a></li>
 
-          <li>
-            <a href='checkout.php'>My Account</a>
+<li><a href="../shop.php">Shop</a></li>
 
-          </li>
+<li>
+<?php
 
+if(!isset($_SESSION['customer_email'])){
 
-        </ul>
-        <!-- ul Ends -->
+echo "<a href='../checkout.php' >My Account</a>";
 
-        <hr>
+}
+else{
 
-        <h4>User Section</h4>
+echo "<a href='my_account.php?my_orders'>My Account</a>";
 
-        <ul>
-          <!-- ul Starts -->
+}
 
-          <li>
 
-            <a href='checkout.php'>Login</a>
+?>
+</li>
 
 
-          </li>
+</ul><!-- ul Ends -->
 
-          <li>
-            <a href="customer_register.php">Register</a>
-          </li>
+<hr>
 
-        </ul>
-        <!-- ul Ends -->
+<h4>User Section</h4>
 
-        <hr class="hidden-md hidden-lg hidden-sm">
+<ul><!-- ul Starts -->
 
-      </div>
-      <!-- col-md-3 col-sm-6 Ends -->
+<li>
+<?php
 
-      <div class="col-md-3 col-sm-6">
-        <!-- col-md-3 col-sm-6 Starts -->
+if(!isset($_SESSION['customer_email'])){
 
-        <h4> Top Products Categories </h4>
+echo "<a href='../checkout.php' >Login</a>";
 
-        <ul>
-          <!-- ul Starts -->
+}
+else{
 
-         <?php
-            $get_p_cats = "SELECT * FROM product_categories";
-            $run_p_cats = mysqli_query($con,$get_p_cats);
-            while($row = mysqli_fetch_array($run_p_cats)){
-              $p_cat_id = $row['p_cat_id'];
-              $p_cat_title = $row['p_cat_title'];
-              echo "<li><a href='shop.php?p_cat=$p_cat_id'> $p_cat_title</a></li>";
-            }
-          ?>
+echo "<a href='my_account.php?my_orders'>My Account</a>";
 
-        </ul>
-        <!-- ul Ends -->
+}
 
-        <hr class="hidden-md hidden-lg">
 
-      </div>
-      <!-- col-md-3 col-sm-6 Ends -->
+?>
 
+</li>
 
-      <div class="col-md-3 col-sm-6">
-        <!-- col-md-3 col-sm-6 Starts -->
+<li><a href="../customer_register.php">Register</a></li>
 
-        <h4>Where to find us</h4>
+<li><a href="../terms.php"> Terms And Conditions </a></li>
 
-        <p>
-          <!-- p Starts -->
-          <strong>Religious Coder</strong>
-          <br>Feni Computer Institute
-          <br>Feni
-          <br>01832759943
-          <br>abiruzzaman.molla@gmail.com
-          <br>
-          <strong>Abiruzzaman Molla</strong>
+</ul><!-- ul Ends -->
 
-        </p>
-        <!-- p Ends -->
+<hr class="hidden-md hidden-lg hidden-sm" >
 
-        <a href="contact.php">Go to Contact us page</a>
+</div><!-- col-md-3 col-sm-6 Ends -->
 
-        <hr class="hidden-md hidden-lg">
+<div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Starts -->
 
-      </div>
-      <!-- col-md-3 col-sm-6 Ends -->
+<h4> Top Products Categories </h4>
 
-      <div class="col-md-3 col-sm-6">
-        <!-- col-md-3 col-sm-6 Starts -->
+<ul><!-- ul Starts -->
 
-        <h4>Get the news</h4>
+<?php
 
-        <p class="text-muted">
-          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        </p>
+$get_p_cats = "select * from product_categories";
 
-        <form action="" method="post" target="popupwindow" onsubmit="">
-          <!-- form Starts -->
+$run_p_cats = mysqli_query($con,$get_p_cats);
 
-          <div class="input-group">
-            <!-- input-group Starts -->
+while($row_p_cats = mysqli_fetch_array($run_p_cats)){
 
-            <input type="text" class="form-control" name="email">
+$p_cat_id = $row_p_cats['p_cat_id'];
 
-            <input type="hidden" value="computerfever" name="uri" />
-            <input type="hidden" name="loc" value="en_US" />
+$p_cat_title = $row_p_cats['p_cat_title'];
 
-            <span class="input-group-btn">
-              <!-- input-group-btn Starts -->
+echo "<li> <a href='shop.php?p_cat=$p_cat_id'> $p_cat_title </a> </li>";
 
-              <input type="submit" value="subscribe" class="btn btn-default">
+}
 
-            </span>
-            <!-- input-group-btn Ends -->
+?>
 
-          </div>
-          <!-- input-group Ends -->
 
-        </form>
-        <!-- form Ends -->
+</ul><!-- ul Ends -->
 
-        <hr>
+<hr class="hidden-md hidden-lg">
 
-        <h4> Stay in touch </h4>
+</div><!-- col-md-3 col-sm-6 Ends -->
 
-        <p class="social">
-          <!-- social Starts --->
 
-          <a href="#">
-            <i class="fa fa-facebook"></i>
-          </a>
-          <a href="#">
-            <i class="fa fa-twitter"></i>
-          </a>
-          <a href="#">
-            <i class="fa fa-instagram"></i>
-          </a>
-          <a href="#">
-            <i class="fa fa-google-plus"></i>
-          </a>
-          <a href="#">
-            <i class="fa fa-envelope"></i>
-          </a>
+<div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Starts -->
 
-        </p>
-        <!-- social Ends --->
+<h4>Where to find us</h4>
 
-      </div>
-      <!-- col-md-3 col-sm-6 Ends -->
+<p><!-- p Starts -->
+<strong>Computerfever Ltd.</strong>
+<br>Saeed Park
+<br>Lahore
+<br>0923334566931
+<br>sad.ahmed22224@gmail.com
+<br>
+<strong>Mohammed Tahir Ahmed</strong>
 
-    </div>
-    <!-- row Ends -->
+</p><!-- p Ends -->
 
-  </div>
-  <!-- container Ends -->
-</div>
-<!-- footer Ends -->
+<a href="../contact.php">Go to Contact us page</a>
 
-<div id="copyright">
-  <!-- copyright Starts -->
+<hr class="hidden-md hidden-lg">
 
-  <div class="container">
-    <!-- container Starts -->
+</div><!-- col-md-3 col-sm-6 Ends -->
 
-    <div class="col-md-6">
-      <!-- col-md-6 Starts -->
+<div class="col-md-3 col-sm-6"><!-- col-md-3 col-sm-6 Starts -->
 
-      <p class="pull-left"> &copy; 2018 Abiruzzaman Molla </p>
+<h4>Get the news</h4>
 
-    </div>
-    <!-- col-md-6 Ends -->
+<p class="text-muted">
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+</p>
 
-    <div class="col-md-6">
-      <!-- col-md-6 Starts -->
+<form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=computerfever', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><!-- form Starts -->
 
-      <p class="pull-right">
+<div class="input-group"><!-- input-group Starts -->
 
-        Template by
-        <a href="http://www.asliabir.xyz">asliabir</a>
+<input type="text" class="form-control" name="email">
 
-      </p>
+<input type="hidden" value="computerfever" name="uri"/>
+<input type="hidden" name="loc" value="en_US"/>
 
+<span class="input-group-btn"><!-- input-group-btn Starts -->
 
-    </div>
-    <!-- col-md-6 Ends -->
+<input type="submit" value="subscribe" class="btn btn-default">
 
-  </div>
-  <!-- container Ends -->
+</span><!-- input-group-btn Ends -->
 
-</div>
-<!-- copyright Ends -->
+</div><!-- input-group Ends -->
+
+</form><!-- form Ends -->
+
+<hr>
+
+<h4> Stay in touch </h4>
+
+<p class="social"><!-- social Starts --->
+
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-google-plus"></i></a>
+<a href="#"><i class="fa fa-envelope"></i></a>
+
+</p><!-- social Ends --->
+
+</div><!-- col-md-3 col-sm-6 Ends -->
+
+</div><!-- row Ends -->
+
+</div><!-- container Ends -->
+</div><!-- footer Ends -->
+
+<div id="copyright"><!-- copyright Starts -->
+
+<div class="container" ><!-- container Starts -->
+
+<div class="col-md-6" ><!-- col-md-6 Starts -->
+
+<p class="pull-left"> &copy; 2016 Mohammed Tahir Ahmed </p>
+
+</div><!-- col-md-6 Ends -->
+
+<div class="col-md-6" ><!-- col-md-6 Starts -->
+
+<p class="pull-right" >
+
+Template by <a href="http://www.computerfever.com" >Computerfever.com</a>
+
+</p>
+
+
+</div><!-- col-md-6 Ends -->
+
+</div><!-- container Ends -->
+
+</div><!-- copyright Ends -->
+
+
+
+
+
+
+

@@ -35,7 +35,7 @@ If you have any questions, please feel free to <a href="../contact.php" >contact
 
 <tr>
 
-<td> Bank Name:ubl Account No:03333333 Branch Code:0342 Branch Name:Shadara Lahore     </td>
+<td> Bank Name:ubl Account No:03333333 Branch Code:0342 Branch Name:Shadara Lahore	 </td>
 
 <td> NIC#001234567 Mobile No:03334566931, Name:M.T.Ahmed </td>
 

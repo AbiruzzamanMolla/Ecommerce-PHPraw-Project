@@ -1,3 +1,5 @@
 <?php
-$con = mysqli_connect("localhost", "root", "root", "e_com");
+
+$con = mysqli_connect("localhost","root","root","ecom_store");
+
 ?>
