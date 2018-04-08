@@ -1,4 +1,39 @@
 # E-Comme
+    5967 text files.
+    5855 unique files.                                          
+     972 files ignored.
+
+github.com/AlDanial/cloc v 1.70  T=20.36 s (245.4 files/s, 32043.1 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+JavaScript                    3756          42001          48924         288211
+CSS                            479           6462           4588          96308
+HTML                           214           6248           4147          73763
+LESS                           153           1900           2291          15532
+PHP                            113          11497             76          11946
+Markdown                        80           3787              0          11649
+JSON                           110              9              0           7258
+SASS                            32            352            100           5320
+TypeScript                       2            122             94           3112
+CoffeeScript                    22            515            278           2544
+Python                           4            225            172            929
+Handlebars                      17             62              2            509
+SQL                              1            133            287            345
+DOS Batch                        1             23              1            166
+make                             3             37              7            162
+Bourne Shell                     3             15              4            112
+YAML                             6             22             16            110
+PowerShell                       1              2              2              4
+-------------------------------------------------------------------------------
+SUM:                          4997          73412          60989         517980
+-------------------------------------------------------------------------------
+
+
+
+
+
+
 
 modern-e-commerce-store-in-php-mysqli-with-bootstrap
 ├── 01 Introduction Section
