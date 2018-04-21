@@ -1,42 +1,31 @@
 <div class="panel panel-default sidebar-menu"><!-- panel panel-default sidebar-menu Starts -->
 
 <div class="panel-heading"><!-- panel-heading Starts -->
-
 <?php
-
 $customer_session = $_SESSION['customer_email'];
 
-$get_customer = "select * from customers where customer_email='$customer_session'";
+$get_customer = "SELECT * FROM customers WHERE customer_email = '$customer_session'";
 
-$run_customer = mysqli_query($con,$get_customer);
+$run = mysqli_query($con, $get_customer);
+$row = mysqli_fetch_array($run);
 
-$row_customer = mysqli_fetch_array($run_customer);
-
-$customer_image = $row_customer['customer_image'];
-
-$customer_name = $row_customer['customer_name'];
+$image = $row['customer_image'];
+$name = $row['customer_name'];
 
 if(!isset($_SESSION['customer_email'])){
 
-
-}
-else {
-
+} else {
 echo "
-
 <center>
 
-<img src='customer_images/$customer_image' class='img-responsive'>
+<img src='customer_images/$image' class='img-responsive'>
 
 </center>
 
 <br>
 
-<h3 align='center' class='panel-title'> Name : $customer_name </h3>
-
-";
-
-}
+<h3 align='center' class='panel-title'> Name : $name </h3>
+"; }
 
 ?>
 
@@ -70,12 +59,6 @@ echo "
 
 </li>
 
-<li class="<?php if(isset($_GET['my_wishlist'])){ echo "active"; } ?>">
-
-<a href="my_account.php?my_wishlist"> <i class="fa fa-heart"></i> My WishList </a>
-
-</li>
-
 <li class="<?php if(isset($_GET['delete_account'])){ echo "active"; } ?>">
 
 <a href="my_account.php?delete_account"> <i class="fa fa-trash-o"></i> Delete Account </a>
@@ -84,7 +67,7 @@ echo "
 
 <li>
 
-<a href="logout.php"> <i class="fa fa-sign-out"></i> Logout </a>
+<a href="../logout.php"> <i class="fa fa-sign-out"></i> Logout </a>
 
 </li>
 
